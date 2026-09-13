@@ -164,10 +164,10 @@ fetch("updates.json")
 
         updates.forEach(update => {
             const lace = document.createElement("div");
-            lace.className = "lace";
+            lace.className = "caixa3 update";
 
             const content = document.createElement("div");
-            content.className = "update";
+            content.className = "";
 
             content.innerHTML = `<p><u>${update.date}</u> ${update.text}</p>`;
 

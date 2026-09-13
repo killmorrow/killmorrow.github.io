@@ -30,6 +30,10 @@
     {
         "date": "07/09/2026",
         "text": "finally added my blogging page"
+    },
+    {
+        "date": "10/09/2026",
+        "text": "got a custom domain! also migrated to github pages and got status cafe's widget to actually work"
     }
     
 ]
