@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE NEWS WITH KILL</title>
+    <meta name="author" content="[your name here!]">
+    <meta name="description" content="[write about your site here!]">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+      
+<!--this container makes the columns display correctly on mobile vs desktop-->
+<div class="container">
+    
+    <header id="top">
+        
+        <a href="/index.html"><img src="images/your-icon.png" alt="my icon"></a>
+        <h1>THE NEWS WITH KILL</h1>
+
+        <!--this bit is the white-on-black section-->
+        <p class="inverted">
+            sua fonte de noticias sobre
+            <a href="/index.html">killmorrow.neocities.org</a>
+        </p>
+        <!--link optional... well everything is optional, it's your website-->
+        
+    </header>
+      
+    <main>
+        
+        <!--each "issue" is made as its own article... you can link to them from the navigation above, then people can click to scroll down to earlier sections (i ordered this reverse-chronologically since it's for the web haha)-->
+        <article id="issue3">
+        <!--make sure to write the id without the #, you only need the # in the href part of the navigation cuz it's a link.. this tripped me up when i first started so i wanted to explain it here.-->
+        <h2>últimas notícias!!!! (sim, é clickbait)</h2>
+            
+        <div class="columns bordered">
+        <!--the "columns" class splits it into a grid with four columns. you can have sections span different columns by using these classes:
+
+        "col" - ■□□□ (can go anywhere)
+        "left-2col" - ■■□□
+        "middle-2col" - □■■□
+        "right-2col" - □□■■
+        "left-3col" - ■■■□
+        "right-3col" - □■■■
+        "fullwidth" - ■■■■
+
+        i hope this doesn't give people too much trouble, i'm sure there's a way to make it figure out the placement automatically (like flexbox instead of grid) but this is how i made it on my page and i'm too lazy to try to streamline it more than this haha-->
+            
+            <section class="col">
+                <h3>oiii!</h3>
+                
+                <p>eu uso essa página bem de vez em nunca. é um blogzinho só que escrevendo pouco. sei lá o que isso configura. um mini blog?</p>
+                <p>eu espero colocar bastante fotinhas aqui! principalmetne de passáros, e mais especificamente de pombinhos. mas deve ter animais aleatórios também. ou nada! não confie em mim!</p>
+                
+                <div class="pic clearfix">
+                    <h4>pera, voce disse pombos?</h4>
+                    <img src="images/akira.png" alt="">
+                    <p>sim! eu tenho dois pombinhos de estimação, a Akira e o Anasui. e fora eles eu alimento muito pombo na rua e tiro foto de qualquer um que tiver chance.</p>                    
+                </div>  
+               
+               
+                <h3>um digital garden?</h3>
+                <p>quando eu comecei a montar esse site, era isso que eu queria que ele fosse. agora tá uma mistura estranha disso, um personal website, um commonplace book e... sei lá.</p>
+                
+            </section>
+            
+            
+            <section class="right-3col">
+                <h4 class="feature">monitor novo!!</h4>
+                <img src="images/monitor.png" class="photo" alt="">
+                <p>
+                    <!--i style the time element to look bold with a bullet point, as a preface for the updates i was posting... but you don't need the time element at all, you can change the css to make it a class and put whatever text you want there. maybe i should've done that for you. WELL IT'S TOO LATE NOW i'm sure you can handle it if you really want.-->
+                    <time>5/7/2026</time> demorou horrores pra essa desgraça chegar, mas a espera valeu a pena demais. a imersao nos jogos é surreal, fora que so 165hz de taxa de atualização fazem mais diferença do que eu esperava (usei 60hz a vida toda porque era meio ateia disso....). em breve vou ate jogar competitivo decentemente
+                </p>
+                
+                <p class="banner">sim, ele é incrível pra programar. melhor do que você imagina. <br> sim, meu setup tava uma zona (tinha acabado de montar!!!</p>
+
+                <hr>
+                
+            </section> 
+            
+             <section class = "col">
+            <p>eu não quero chamar de nada definitivo porque não pretendo delimitar o que eu posso ou não colocar aqui... </p>
+                <p>a única coisa que eu posso dizer é que isso é definitivamente algo (?)</p>
+                
+                <div class="clearfix">
+                    <img src="images/anasui.png" class="small-photo-right" alt="">
+                    <p>aqui vai mais uma fotinha da minha querida, só porque... sei lá. por que nao?</p>
+                    <p><em>"wo wo wo wo", akira 2025</em></p>
+                </div>
+            </section>
+            
+            <section class="col">
+                <h4 class="feature">lucy veio pra casa!!</h4>
+                <img src="images/lucy.png" class="photo" alt="">
+                <p>
+                    <!--i style the time element to look bold with a bullet point, as a preface for the updates i was posting... but you don't need the time element at all, you can change the css to make it a class and put whatever text you want there. maybe i should've done that for you. WELL IT'S TOO LATE NOW i'm sure you can handle it if you really want.-->
+                    <time>11/6/2026</time> nem gravei os pulls porque foi logo pity 20... e ainda ganhei o 50/50!! cara, acho que foi a primeira vez que ganho um 50/50 na vida.
+                </p>
+                
+
+                <h3> </h3>
+             </section> 
+
+              <section class="right-2col">
+                <h4 class="feature">pombinhos locais botam ovo</h4>
+                <img src="images/ovo.png" class="photo" alt="">
+                <p>
+                    <!--i style the time element to look bold with a bullet point, as a preface for the updates i was posting... but you don't need the time element at all, you can change the css to make it a class and put whatever text you want there. maybe i should've done that for you. WELL IT'S TOO LATE NOW i'm sure you can handle it if you really want.-->
+                    <time>3/6/2026</time> surpreendendo todo mundo que achava serem dois machos por causa dos meses de convicência amorosa; sim, eles fizeram um ovinho!
+                </p>
+                
+                <p class="banner">secretamente foi trocado por um falso pra prevenir novas bocas na casa.</p>
+                <!--i had to make a "pic" class for floating images in the wide columns since i wanted the image width to always be a certain size...-->
+             </section>           
+            
+            
+            <!--i put instructions for the image filter i used here in case other people wanna do the same thing-->
+            <section class="col">
+
+                
+            </section>
+        </div>
+        </article>
+    
+        </main>
+            
+  </div>
+    
+  </body>
+  
+</html>

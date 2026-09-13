@@ -1,0 +1,350 @@
+@font-face {
+  font-family: pixel;
+  src: url(PixelForge.otf);
+}
+
+@font-face {
+  font-family: retro;
+  src: url(fonts/Retro-Gaming.ttf);
+}
+
+* {
+  color: var(--text-color);
+  font-family: pixel;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f1011;
+  color: #a0a0a0;
+  font-family: pixel;
+  line-height: 1.5;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: pixel;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #333;
+  padding-bottom: 10px;
+}
+
+
+/* ===== LAYOUT ===== */
+
+.layout-principal {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.coluna-esquerda {
+  flex: 1;
+}
+
+.coluna-direita {
+  width: 260px;
+  position: sticky;
+  top: 40px;
+}
+
+
+/* ===== NAVEGAÇÃO ===== */
+
+.nav-anos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-top: 1px dotted #333;
+  border-bottom: 1px dotted #333;
+  padding: 15px 0;
+}
+
+.btn-ano {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+}
+
+.btn-ano:hover {
+  color: #ffffff;
+  background-color: #1a1b1c;
+  border-radius: 4px;
+}
+
+
+/* ===== FAVORITOS ===== */
+
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fav-card img {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #333;
+}
+
+
+/* ===== ESTATÍSTICAS ===== */
+
+.stats-box {
+  background-color: #1a1b1c;
+  border: 1px solid #2a2b2c;
+  border-radius: 4px;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+
+/* ===== LIVROS ===== */
+
+.livro-item {
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid #222;
+}
+
+.capa-container {
+  flex-shrink: 0;
+}
+
+.capa-container img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #333;
+  border-radius: 2px;
+}
+
+.sem-capa {
+  width: 120px;
+  height: 180px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.conteudo-livro {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ===== DATA + FÍSICO/VIRTUAL ===== */
+
+.data-lido {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 0.8rem;
+  color: #888;
+
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.tipo-leitura {
+  font-size: 0.75rem;
+  text-transform: none;
+}
+
+.tipo-leitura.fisico {
+  color: #a0a0a0;
+}
+
+.tipo-leitura.virtual {
+  color: #777;
+}
+
+
+/* ===== TÍTULO + AUTOR ===== */
+
+.cabecalho-livro {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.cabecalho-livro h3 {
+  font-family: pixel;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cabecalho-livro .autor {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.cabecalho-livro .ano {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.estrelas {
+  margin-left: 5px;
+  font-size: 1.1rem;
+}
+
+.star.filled {
+  color: #3182ce;
+}
+
+.star.empty {
+  color: #555;
+}
+
+
+/* ===== TAGS ===== */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+
+  padding: 2px 7px;
+
+  background-color: #1a1b1c;
+  border: 1px solid #333;
+  border-radius: 3px;
+
+  color: #888;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+
+/* ===== REVIEW ===== */
+
+.caixa-review {
+  background-color: #151617;
+  border: 1px solid #2a2b2c;
+  border-radius: 6px;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+
+/* ===== ESPAÇAMENTO DOS ANOS ===== */
+
+.ano-section {
+  margin-bottom: 60px;
+}
+
+
+/* ===== BOTÃO TOPO ===== */
+
+.btn-topo {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+
+  background-color: #151617;
+  color: #a0a0a0;
+
+  border: 1px dashed #333;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+
+  cursor: pointer;
+  border-radius: 4px;
+
+  transition: all 0.2s ease;
+}
+
+.btn-topo:hover {
+  background-color: #3182ce;
+  color: #ffffff;
+  border-color: #3182ce;
+  border-style: solid;
+}
+
+
+/* ===== BLINK ===== */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+  color: inherit;
+}
+
+
+.estrelas {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.star.filled {
+  color: #7c5aa6;
+}
+
+.star.empty {
+  color: #4a4650;
+}
+
+.star.half {
+  color: #4a4650;
+  position: relative;
+  display: inline-block;
+}
+
+.star.half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #7c5aa6;
+}

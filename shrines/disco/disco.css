@@ -1,0 +1,248 @@
+@font-face {
+  font-family: sinanova;
+  src: url(disco/sinanova.ttf);
+}
+
+
+
+
+
+
+
+:root {
+            --disco-blue: #6296ba;
+            --disco-gold: #c9a567;
+            --disco-orange: #d94b2b;
+            --disco-purple: #926ead;
+            --disco-green: #67c9a5;
+            --disco-ink: #101518;
+            --paper: #e0e0e0;
+        }
+
+        ::selection { background-color: var(--disco-orange); color: var(--disco-ink); }
+        
+        html, body {
+            background-color: #05080a;
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--paper);
+            font-family: 'sinanova', serif;
+            margin: 0;
+            padding: 15px 20px;
+            overflow-x: hidden;
+        }
+
+        .disco-wrapper {
+            display: grid;
+            grid-template-columns: 350px minmax(300px, 550px);
+            gap: 40px;
+            max-width: 950px;
+            width: 100%;
+            margin: 0 auto;
+            zoom: 0.8;
+        }
+
+        .sidebar-area { position: relative; width: 350px; }
+
+        .notebook {
+            background-image: url('note.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat;
+            padding: 85px 40px 60px 40px; 
+            width: 360px;
+            min-height: 500px;
+            transform: rotate(-2deg);
+            filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.6));
+            color: var(--paper); 
+            position: relative;
+            z-index: 5;
+        }
+
+        .notebook h2 {
+            font-family: 'sinanova', monospace;
+            font-size: 13px;
+            color: var(--paper);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 10px;
+            margin-left: 75px;
+        }
+
+        .notebook ul {
+            list-style: none;
+            padding: 0;
+            font-family: 'sinanova', serif;
+            font-weight: bold;
+            color: var(--paper);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-left: 75px;
+            margin-top: -5px;
+        }
+
+        .portrait-frame {
+            width: 130px;
+            height: 160px;
+            border: 2px solid var(--disco-gold);
+            margin: 0 auto 15px;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .portrait { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
+        .portrait.alt { position: absolute; top: 0; left: 0; opacity: 0; }
+        .portrait-frame:hover .main-img { opacity: 0; }
+        .portrait-frame:hover .alt { opacity: 1; }
+
+        .thought-cabinet {
+            background: rgba(16, 21, 24, 0.85);
+            border: 1px solid #333;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            position: relative;
+            height: 630px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dialogue-scroll-area {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+            
+        }
+
+        .dialogue-scroll-area::-webkit-scrollbar { width: 4px; }
+        .dialogue-scroll-area::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+        .dialogue-scroll-area::-webkit-scrollbar-thumb { background-color: #333; border-radius: 10px; }
+        .dialogue-scroll-area:hover::-webkit-scrollbar-thumb { background-color: var(--disco-orange); }
+
+        .skill-name { 
+             font-family: 'sinanova', monospace; 
+             text-transform: uppercase; 
+             font-size: 15px; 
+             letter-spacing: 2px;
+        }
+
+        .volition { color: var(--disco-purple); }
+        .kim { color: var(--paper); }
+
+        .dialogue-text { font-size: 21px; margin: 10px 0 30px 0; line-height: 1.3; opacity: 80%; }
+
+        .responses-area {
+            border-top: 1px solid #333;
+            padding-top: 10px;
+            counter-reset: response-counter; 
+        }
+
+        .response-opt { 
+             color: var(--disco-orange); 
+             text-decoration: none; 
+             display: block; 
+             margin-top: 15px; 
+             font-size: 20px; 
+             position: relative; 
+             transition: all 0.3s ease; 
+             padding: 5px 10px;
+             margin-left: -10px;
+             border-radius: 4px;
+        }
+
+        .response-opt:hover { 
+             color: #ffffff !important; 
+             text-shadow: 0 0 8px var(--disco-orange);
+             background: rgba(201, 165, 103, 0.15);
+             transform: translateX(8px);
+        }
+
+        .response-opt::before { 
+            content: counter(response-counter) ". "; 
+            counter-increment: response-counter; 
+            font-family: 'sinanova', monospace; 
+            opacity: 0.5; 
+            margin-right: 5px; 
+        }
+
+        .response-opt:hover::after { 
+            content: " [ CHECK SUCCESS ]"; 
+            font-family: 'sinanova', monospace; 
+            font-size: 10px; 
+            color: var(--disco-green); 
+            margin-left: 10px; 
+        }
+
+        .under-gif-wrapper {
+            position: absolute;
+            top: 430px;
+            left: 175px;
+            width: 110px; 
+            z-index: 20;
+            cursor: help;
+        }
+
+        .necktie-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px; 
+            z-index: 9999;
+            cursor: help;
+        }
+
+        .under-gif-wrapper img, .necktie-wrapper img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            position: absolute;
+            background: var(--disco-ink);
+            color: #fff;
+            border: 1px solid var(--disco-orange);
+            padding: 8px 12px;
+            font-family: 'sinanova', monospace;
+            font-size: 11px;
+            box-shadow: 4px 4px 0px var(--disco-orange);
+            z-index: 999;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            pointer-events: none;
+            width: 150px;
+        }
+
+        .under-gif-wrapper:hover .tooltip-text { visibility: visible; opacity: 1; top: 110%; right: 0; }
+        .necktie-wrapper:hover .tooltip-text { visibility: visible; opacity: 1; bottom: 125%; right: 0; }
+
+        .horrific-necktie-img {
+            animation: tie-float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px var(--disco-orange));
+        }
+
+        @keyframes tie-float { 
+            0%, 100% { transform: translateY(0) rotate(5deg); } 
+            50% { transform: translateY(-10px) rotate(-5deg); } 
+        }
+
+
+
+a {
+    color: #ebe6ee;
+}
+
+.img{
+    width: 380px;
+    border: 4px solid #b49b9b;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

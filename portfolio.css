@@ -1,0 +1,137 @@
+@font-face {
+  font-family: pixel;
+  src: url(fonts/PixelForge.otf);
+}
+
+
+@font-face {
+  font-family: desminore;
+  src: url(fonts/desminore.otf);
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #8ab4f8;
+    font-family: 'pixel', monospace;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.browser-bar {
+    background-color: #151b2b;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 25px;
+    border: 1px solid #222b42;
+}
+
+.browser-bar .icon {
+    color: #fff;
+}
+
+.title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.portfolio-list {
+    max-height: 520px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-right: 10px;
+}
+
+.portfolio-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.portfolio-list::-webkit-scrollbar-track {
+    background: #0b0f19;
+}
+
+.portfolio-list::-webkit-scrollbar-thumb {
+    background: #222b42;
+    border-radius: 3px;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #121826;
+    border: 1px solid #1e293b;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.portfolio-item:hover .image-box {
+    border-color: #3b82f6;
+    transform: translateY(-4px);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-item h2 {
+    font-size: 16px;
+    color: #38bdf8;
+    margin-bottom: 4px;
+}
+
+.portfolio-item p {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.4;
+}
+
+.related-section {
+    margin-top: 30px;
+}
+
+.related-section h2 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+.roxo {
+    text-align: center;
+}
+
+.roxo > * {
+    filter: brightness(0.5) sepia(1) hue-rotate(245deg) saturate(100%) contrast(120%);
+    transition: filter 0.3s ease;
+}
+
+.roxo > *:hover {
+    filter: none;
+}

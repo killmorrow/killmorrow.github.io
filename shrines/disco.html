@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you're the miracle</title>
+    <link rel="stylesheet" href="disco/disco.css">
+</head>
+
+<body>
+    <div class="disco-wrapper">
+        <div class="sidebar-area">
+            <div class="under-gif-wrapper">
+                <span class="tooltip-text">THE FUCK DOES CUNO CARE?!</span>
+                <a href="/shrines.html"><img src="disco/cuno.gif" alt="stain"></a>
+            </div>
+
+            <aside class="notebook">
+                <div class="portrait-frame">
+                    <img src="disco/kim.png" class="portrait main-img">
+                    <img src="disco/harry.png" class="portrait alt">
+                </div>
+                <h2>FIELD NOTES</h2>
+                <ul>
+                  <a href="#" onclick="task('cuno')"> <li>Split a kilo with Cuno</li></a>
+                  <a href="#" onclick="task('jacket')"><li>Get Kim to wear <i>The Jacket</i></li></a>
+                  <a href="#" onclick="task('nightclub')"><li>Help the ravers start a nightclub</li></a>
+                  <a href="#" onclick="task('phasmid')"><li>Find the insulindian phasmid</li></a>
+                </ul>
+            </aside>
+        </div>
+
+        <main class="thought-cabinet">
+            <!-- ADICIONADO: id="dialogue-area" para o JS encontrar esta div -->
+            <div class="dialogue-scroll-area" id="dialogue-area">
+                <div class="dialogue-block">
+                    <span class="skill-name kim">KIM KITSURAGI</span>
+                    <p class="dialogue-text">A bespectacled man in an orange bomber jacket is typing his foot on the floor. Looks like he's waiting for someone - you.</p>
+                    <p class="dialogue-text">As you approach, he narrows his eyes and extends his hands in greeting.</p>
+                </div>
+
+                <div class="dialogue-block">
+                    <span class="skill-name volition">ESPRIT DE CORPS</span> <span style="color: grey">[medium: success]</span>
+                    <p class="dialogue-text">If an assault were launched on this building right now -- if the windows came crashing down and the whole world descended upon you -- this man would hurl himself in death's way to save you. You are sure of this -- but why?</p>
+                </div>
+            </div> 
+
+            <!-- ADICIONADO: id="responses-area" para atualizar os botões -->
+            <div class="responses-area" id="responses-area">
+                <a href="#" class="response-opt" onclick="mudarProgresso('apertar_mao')">"Shake his hand."</a>
+                <a href="#" class="response-opt" onclick="mudarProgresso('ignorar')">"Don't shake his hand."</a>
+                <a href="#" class="response-opt" onclick="mudarProgresso('quem_e_ele')">"Hold on, who is he to me?"</a>
+                
+            </div>
+        </main>
+    </div>
+
+    <!-- SCRIPT ADICIONADO NO FINAL DO BODY -->
+    <script>
+        // 1. Armazena os textos e as próximas opções de cada escolha
+        const historia = {
+            apertar_mao: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name kim">KIM KITSURAGI</span>
+                        <p class="dialogue-text">He firmly grips your hand, giving it a single, professional nod. "Lieutenant Kim Kitsuragi, Area RCM. Ready when you are, officer."</p>
+                    </div>
+                `,
+                opcoes: `
+                    <a href="#" class="response-opt" onclick="mudarProgresso('comeco')">"Let's get to work."</a>
+                `
+            },
+            ignorar: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name kim">KIM KITSURAGI</span>
+                        <p class="dialogue-text">His hand remains in the air for a second before he slowly drops it back to his side, unbothered. "Right. No time for pleasantries, then."</p>
+                    </div>
+                `,
+                opcoes: `
+                    <a href="#" class="response-opt" onclick="mudarProgresso('comeco')">"Exactly. Let's move."</a>
+                `
+            },
+            quem_e_ele: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name volition">INLAND EMPIRE</span> <span style="color: grey">[easy: success]</span>
+                        <p class="dialogue-text">He is your anchor to reality. Without him, you are just a drifting ghost in a ruined world.</p>
+                    </div>
+                `,
+                opcoes: `
+                    <a href="#" class="response-opt" onclick="mudarProgresso('mais')">"I want to know more."</a>
+                    <a href="#" class="response-opt" onclick="mudarProgresso('comeco')">"Let's stop here."</a>
+                `
+            },
+            comeco: {
+                texto: `
+                    <div class="dialogue-block">
+                        <p class="dialogue-text">The investigation begins...</p>
+                    </div>
+                `,
+                opcoes: `` 
+            },
+            mais: {
+                texto: `
+                    <div class="dialogue-block">
+                        <p class="dialogue-text">I'm still working on this...</p>
+                    </div>
+                `,
+                opcoes: `` 
+            }
+            
+        };
+
+     
+        function mudarProgresso(chave) {
+            const caixaDialogo = document.getElementById('dialogue-area');
+            const caixaRespostas = document.getElementById('responses-area');
+
+            if (historia[chave]) {
+                caixaDialogo.innerHTML += historia[chave].texto;
+                
+                // OPÇÃO B: Se preferir APAGAR o texto antigo e mostrar só o novo, use a linha abaixo:
+                // caixaDialogo.innerHTML = historia[chave].texto;
+
+                // Atualiza as opções de resposta lá embaixo
+                caixaRespostas.innerHTML = historia[chave].opcoes;
+
+                // Faz a tela rolar automaticamente para o final para ver o texto novo
+                caixaDialogo.scrollTop = caixaDialogo.scrollHeight;
+            }
+        }
+    </script>
+
+<!---   scrip das quest ebaaaaaaaaaaaaa-->
+
+ <script>
+        // 1. Armazena os textos e as próximas opções de cada escolha
+        const tasks = {
+            cuno: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name volition">SPOILER ALERT!</span><span style="color: grey">[my experience]</span>
+                        <p class="dialogue-text">when i started this quest, i wasnt deep enough into the game to take it seriously. in my mind, i would just give drugs to a kid and gain some info out of it; who cares about morality in a video game? this kids isnt real, he's annoying as fuck, and i'm just a shitty cop</p>
+                        <p class="dialogue-text">but honestly, this game hooks you up inexplicably well. i cant pinpoint when i started caring for Cuno. i just know that when i got the drugs, i didnt want to give it to him at all.</p>
+                        <img class="img" src="disco/cuno.jpg">
+                        <p class="dialogue-text">i lowkey saw Harry in him, somehow. Harry wanted to get worse, but cuno didnt deserve the same fate. people failed this kid. i wanted to adopt him lmao.</p>
+                        <p class="dialogue-text">i was so scared he was going to stop talking to me if i didnt give him the drugs, but even so, i would rather "lose him" than collaborate to his downfall. i was also terrified of what Kim would think of me, ngl. so i didnt split it him, after all.</p>
+                        <img class="img" src="disco/cunoo.jpg">
+                        <p class="dialogue-text">i love this quest because i love cuno, i loved getting to know him.</p>
+                        <p class="dialogue-text">i replayed the game just to get him as my investigation partner. i grief the game about him and Cunoesse that never got to exist.</p>
+                        <p class="dialogue-text">i really wish we got to know her deeper as we did with Cuno. she made him worse, but she was just a victim too. love this siblings very deeply. i wanted to see them succeed.</p>
+                    </div>
+                `,
+                opcoes: ``
+            },
+            jacket: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name volition">SPOILER ALERT!</span><span style="color: grey">[my experience]</span>
+                        <p class="dialogue-text">one of my biggest regrets in my first run was not doing this quest! i stole the jackets too later and THAT EVENT happened on the next day, giving me no opportunity.</p>
+                        <p class="dialogue-text">even so, it was one of my favorite quests. i can only imagine how much i would love it if i stumbled on it accidentally...</p>
+                        <img class="img" src="disco/jacket.jpg">
+                        <p class="dialogue-text">i laughed so hard when we convince Kim to pick one of them. idk there's not much to say abt it. not a deep quest or anything. just silly.</p>
+                        <p class="dialogue-text">it just warmed my heart to see Kim being silly with Harry. like, yes, WE ARE friends!!</p>
+                        <img class="img" src="disco/jackett.jpg">
+                        <p class="dialogue-text">specially with my timing, since THAT happened right after... yeah they love each other so much.</p>
+                        <p class="dialogue-text">he would follow you into death itself... and you would do the same for him.</p>
+                    </div>
+                `,
+                opcoes: ``
+            },
+            nightclub: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name volition">SPOILER ALERT!</span><span style="color: grey">[my experience]</span>
+                        <p class="dialogue-text">i'm so thankfull for not skipping this quest!</p>
+                        <p class="dialogue-text">ok, let me be honest. i was a bit of a save scummer here... people told me the quest of finding the hardie girl was somewhat near the end (which just... wasnt true at all tbh...) and i found her SUPER FAST. and then i panicked cuz there was still so much stuff to explore! </p>
+                        <p class="dialogue-text">i couldnt hold myself from just going back. and THEN i did the nightclub quest. so i kind of skipped it actually. but not really. i did on my first run, anyways...</p>
+                        <img class="img" src="disco/dance.gif">
+                        <p class="dialogue-text"> admitedly, i thought most of it was extremely boring. mostly the "pre-quest" u need to unlock this one. thouhgt of just quitting it. thank god i didnt!!!</p>
+                        <p class="dialogue-text"> this quest lovely. again, it makes my hear so warm when Kim is silly with Harry. convincing him to dance, dancing, talking shit. just having fun... i wish i could stay there forever.</p>
+                        <p class="dialogue-text">it was the last thing i did before THAT MOMENT so... it has become a bittersweet memory. we had no worries.</p>
+                        <p class="dialogue-text">you may find out around this page that i shipp Kim and Harry, and this moment was lowkey the nail in the coffin for that to happen. we exchanged the sweetest moment ever followed by THAT? yeah get married rn.</p>
+                        <img class="img" src="disco/dance.jpg">
+                        <p class="dialogue-text">the ravers were actually quite interesting as well. i'd be lying if i said i got deeply involved in their personal lores, but talking to egg head was always so much fun, and acele was really pretty.</p>
+                    </div>
+                `,
+                opcoes: ``
+            },
+            phasmid: {
+                texto: `
+                    <div class="dialogue-block">
+                        <span class="skill-name volition">SPOILER ALERT!</span><span style="color: grey">[my experience]</span><BR>
+                        <span class="skill-name volition">GENUINELY DONT SCROLL IF YOU HAVENT PLAYED IT</span><BR>
+                        <span class="skill-name volition">PLS PLAY FIRST ITS HEAVY ENDING SPOILERS</span><br>
+                        <span class="skill-name volition">THE GAME IS PERFECT YOU WILL REGRET NOT PLAYING IT I PROMISE YOU</span>
+                        <p class="dialogue-text">some people say they were underwhelmed by this game's ending, and genuinely: how?</p>
+                        <p class="dialogue-text">in my first playthrough, i actually didnt get this "true ending". i did all the fucking quest just to refuse the pheromones at the end. im so dumb bro istg...</p>
+                        <p class="dialogue-text">but! i just didnt know what was coming and im happy i didnt. even tho i missed the interaction, i got so surprised. for some reason, i felt so happy? this great surprise felt like a "keep going" message somehow.</p>
+                        <p class="dialogue-text">lena an morell sounded insane, but they had so much hope, and the fact the were right just filled me with wishful thinking about reality too.</p>
+                        <p class="dialogue-text">of course, i had to replay and put it right.</p>
+                        <a href="https://x.com/VisforVlod"><img class="img" src="disco/phasmidd.jpg"></a>
+                        <p class="dialogue-text">even when i missed the dialogue, this quest really spoke to me when giving the hint to try again. of course, by the goat:</p>
+                        <span class="skill-name volition">volition</span>
+                        <p class="dialogue-text">"Subdue the regret. Dust yourself off, proceed. You'll get it in the next life, where you don't make mistakes. Do what you can with this one, while you're alive."</p>
+                        <p class="dialogue-text">like damn, i really am alive arent i? what good does brooding on your mistakes do? fix what you can or get over it and do better next time.</p>
+                        <p class="dialogue-text">i will write more about the dialogue with the phasmid itself soon. i just recently talked with it and im still collecting my thouhts about it. needless to say, its a beautiful talk.</p>
+                        <img class="img" src="disco/phasmid.jpg">
+                        
+                    </div>
+                `,
+                opcoes: `` 
+            }
+        };
+
+     
+        function task(chave) {
+            const caixaDialogo = document.getElementById('dialogue-area');
+            const caixaRespostas = document.getElementById('responses-area');
+
+            if (tasks[chave]) {
+                caixaDialogo.innerHTML = tasks[chave].texto;
+
+                // Atualiza as opções de resposta lá embaixo
+                caixaRespostas.innerHTML = tasks[chave].opcoes;
+
+                // Faz a tela rolar automaticamente para o final para ver o texto novo
+                caixaDialogo.scrollTop = caixaDialogo.scrollHeight;
+            }
+        }
+    </script>
+
+</body>
+</html>

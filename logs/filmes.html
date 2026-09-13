@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>diario filmes</title>
+  <link rel="stylesheet" href="filmes/style.css">
+</head>
+<body>
+
+  <!-- Contêiner que divide a tela em esquerda e direita -->
+  <div class="layout-principal">
+    
+    <!-- COLUNA ESQUERDA (Diário e Anos) -->
+    <main class="coluna-esquerda">
+      <h1>🎬 diário de filmes<span class="blink">_</span></h1>
+      
+      <!-- Onde os botões de anos vão aparecer -->
+      <nav id="nav-anos" class="nav-anos"></nav>
+
+      <!-- Onde as reviews vão aparecer -->
+      <div id="container-dos-filmes"></div>
+    </main>
+
+    <!-- COLUNA DIREITA (Favoritos) -->
+    <aside class="coluna-direita">
+      <h2 class="blink">meus favs!!</h2>
+      
+      <!-- Substitua os links abaixo pelas URLs reais dos pôsteres dos seus favoritos -->
+      <div class="favoritos-grid">
+        <div class="fav-card"><img src="https://image.tmdb.org/t/p/w500/5fCrBDJLHxywiFr19o4aOWf92VN.jpg" alt="Favorito 1"></div>
+        <div class="fav-card"><img src="https://image.tmdb.org/t/p/w500/3unRxrwRr1yKvN0GKgsftoYajiK.jpg" alt="Favorito 2"></div>
+        <div class="fav-card"><img src="https://image.tmdb.org/t/p/w500/ku1UvTWYvhFQbSesOD6zteY7bXT.jpg" alt="Favorito 3"></div>
+        <div class="fav-card"><img src="https://image.tmdb.org/t/p/w500/4H3PRBByUC84fc03P3sGhgdhuMD.jpg" alt="Favorito 4"></div>
+      </div>
+      
+      <button id="btn-topo" class="btn-topo">↑ voltar ao topo</button>
+    </aside>
+
+  </div>
+
+  <script src="filmes/script.js"></script>
+  <script src="../script.js" defer></script>
+</body>
+</html>

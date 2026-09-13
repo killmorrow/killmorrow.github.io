@@ -1,0 +1,259 @@
+@font-face {
+  font-family: pixel;
+  src: url(fonts/PixelForge.otf);
+}
+
+@font-face {
+  font-family: centrion;
+  src: url(fonts/yoshiro.otf);
+}
+
+
+@font-face {
+  font-family: racing;
+  src: url(fonts/RacingNumbers.ttf);
+}
+
+@font-face {
+  font-family: ledlight;
+  src: url(fonts/LEDLIGHT.otf);
+}
+
+@font-face {
+  font-family: novem;
+  src: url(fonts/novem___.ttf);
+}
+
+@font-face {
+  font-family: desminore;
+  src: url(fonts/desminore.otf);
+}
+
+* {
+    color: var(--text-color);
+    font-family: pixel;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 10px 0;
+    padding: 0;
+    transform: scale(1.2);
+}
+
+body {
+    background: #000000;
+}
+
+
+/* COMPUTADOR */
+
+.computador {
+    position: relative;
+    pointer-events: none;
+
+    width: 950px;
+    height: 950px;
+
+    margin: auto auto;
+}
+
+
+/* IMAGEM DO COMPUTADOR */
+
+.pc {
+    position: absolute;
+    pointer-events: none;
+
+    width: 950px;
+    height: 950px;
+
+    left: 0;
+    top: 0;
+
+    z-index: 2;
+}
+
+
+/* JANELA */
+
+.navegador {
+    position: absolute;
+    pointer-events: none;
+
+    left: 220px;
+    top: 160px;
+
+    width: 450px;
+    height: 350px;
+
+    z-index: 1;
+
+    overflow: hidden;
+    background-image: url("images/layout/44.png");
+
+    transform: scale(0.95);
+}
+
+
+/* IMAGEM DA JANELA */
+
+.janela {
+    position: absolute;
+    pointer-events: none;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+}
+
+
+/* CONTEÚDO */
+
+.conteudo {
+    position: absolute;
+    pointer-events: none;
+
+    left: 50px;
+    top: 80px;
+
+   width: 350px;
+   height: 210px;
+
+    z-index: 0;
+
+    background: rgb(48, 48, 48);
+
+    padding: 0px;
+    margin: 0px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    line-height: 1.2;
+
+    color: #dddbdb;
+}
+
+
+
+.conteudo h2 {
+    margin: 8px 0 4px;
+    font-family: desminore;
+    font-size: 10px;
+}
+
+
+.conteudo p {
+    margin: 4px 0;
+    font-size: 7px;
+}
+
+
+.conteudo a {
+    color: #000080;
+}
+
+
+
+.roxo {
+    filter: brightness(0.5) sepia(1) hue-rotate(245deg) saturate(100%) contrast(120%);
+    transition: filter 0.3s ease;
+}
+
+
+h1{
+    padding-left: 100px;
+    font-size: xx-small !important;
+    margin: 3px;  
+    background-color: #000000;  
+}
+
+
+
+
+.caixa {
+    position: relative;
+    padding: 20px;
+    z-index: 0;
+    margin: 15px;
+    margin-right: 25px;
+}
+
+.caixa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 7px solid;
+    border-image: url("https://static.tumblr.com/yn7vk7p/DfHmp40xm/bo-ha26.gif") 8 round;
+    filter: brightness(0.5) sepia(1) hue-rotate(245deg) saturate(100%) contrast(75%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.caixa::after {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    background: #1a1919;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.caixa h2 {
+    margin: 8px 0 4px;
+    font-size: 10px;
+}
+
+.caixa h2 small {
+    font-size: 6px;
+    font-weight: normal;
+    margin-left: 6px;
+}
+
+.rolagem {
+    height: 180px;
+    max-height: 180px;
+}
+#posts {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    pointer-events: auto;
+}
+
+
+
+.back{
+    position: relative;
+    top: 475px;
+    left:690px;
+
+    height: 26px;
+    width: 26PX;
+    border-radius: 100%;
+
+    background: transparent;
+    border: #000000 px;
+    
+    z-index: 999999999;
+    pointer-events: auto;
+}

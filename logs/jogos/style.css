@@ -1,0 +1,278 @@
+
+
+@font-face {
+  font-family: pixel;
+  src: url(PixelForge.otf);
+}
+
+@font-face {
+  font-family: retro;
+  src: url(fonts/Retro-Gaming.ttf);
+}
+
+
+/* this applies to all the content */
+* {
+    color: var(--text-color);
+/* change the font here, it's set up to all use the same one */
+    font-family: pixel;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f1011; 
+  color: #a0a0a0;
+  font-family: pixel;
+  line-height: 1.5;
+  padding: 40px 20px;
+  /* Aumentei a largura pra caber a barra lateral */
+  max-width: 1100px; 
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-family: pixel;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #333;
+  padding-bottom: 10px;
+}
+
+/* ===== LAYOUT DE COLUNAS ===== */
+.layout-principal {
+  display: flex;
+  gap: 50px; /* DistÃ¢ncia entre o diÃ¡rio e os favoritos */
+  align-items: flex-start;
+}
+
+.coluna-esquerda {
+  flex: 1; /* Ocupa todo o espaÃ§o que sobrar */
+}
+
+.coluna-direita {
+  width: 260px; /* Largura fixa para os favoritos */
+  position: sticky; /* Faz a barra lateral te acompanhar no scroll */
+  top: 40px; 
+}
+
+/* ===== NAVEGAÃ‡ÃƒO DE ANOS ===== */
+.nav-anos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-top: 1px dotted #333;
+  border-bottom: 1px dotted #333;
+  padding: 15px 0;
+}
+
+.btn-ano {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+}
+
+.btn-ano:hover {
+  color: #ffffff;
+  background-color: #1a1b1c;
+  border-radius: 4px;
+}
+
+/* ===== FAVORITOS (DIREITA) ===== */
+.favoritos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas pra fazer um 2x2 */
+  gap: 10px;
+}
+
+.fav-card img {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #333;
+}
+
+/* ===== FILMES E REVIEWS (ESQUERDA) ===== */
+.stats-box {
+  background-color: #1a1b1c;
+  border: 1px solid #2a2b2c;
+  border-radius: 4px;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.filme-item {
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid #222;
+}
+
+.poster-container {
+  flex-shrink: 0;
+}
+
+.poster-container img {
+  width: 120px;
+  border: 1px solid #333;
+  border-radius: 2px;
+}
+
+.sem-capa {
+  width: 120px;
+  height: 180px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.conteudo-filme {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-visto {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.cabecalho-filme {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.cabecalho-filme h3 {
+  font-family: pixel;;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cabecalho-filme .ano {
+  font-size: 1rem;
+  color: #999;
+}
+
+
+.caixa-review {
+  background-color: #151617;
+  border: 1px solid #2a2b2c;
+  border-radius: 6px;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* EspaÃ§amento extra no fim de cada ano */
+.ano-section {
+  margin-bottom: 60px; 
+}
+/* O bloco prÃ³prio com a review logo abaixo */
+.caixa-review {
+  background-color: #151617; /* Um fundo um pouquinho mais claro que a pÃ¡gina */
+  border: 1px solid #2a2b2c;
+  border-radius: 6px;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* ===== BOTÃƒO VOLTAR AO TOPO ===== */
+.btn-topo {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background-color: #151617;
+  color: #a0a0a0;
+  border: 1px dashed #333;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-topo:hover {
+  background-color: #3182ce; 
+  color: #ffffff;
+  border-color: #3182ce;
+  border-style: solid;
+}
+
+
+
+.capa-jogo {
+  width: 140px; 
+  height: 150px; 
+  object-fit: cover; 
+  object-position: center;
+  border-radius: 4px; 
+}
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+  color: inherit; 
+}
+
+
+
+.estrelas {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.star.filled {
+  color: #7c5aa6;
+}
+
+.star.empty {
+  color: #4a4650;
+}
+
+.star.half {
+  color: #4a4650;
+  position: relative;
+  display: inline-block;
+}
+
+.star.half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #7c5aa6;
+}
