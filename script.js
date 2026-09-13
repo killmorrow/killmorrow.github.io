@@ -164,7 +164,7 @@ fetch("updates.json")
 
         updates.forEach(update => {
             const lace = document.createElement("div");
-            lace.className = "caixa3 update";
+            lace.className = "caixa3";
 
             const content = document.createElement("div");
             content.className = "";
