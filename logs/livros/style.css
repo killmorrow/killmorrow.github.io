@@ -11,9 +11,6 @@
 * {
   color: var(--text-color);
   font-family: pixel;
-}
-
-* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -47,7 +44,6 @@ h2 {
   padding-bottom: 10px;
 }
 
-
 /* ===== LAYOUT ===== */
 
 .layout-principal {
@@ -65,7 +61,6 @@ h2 {
   position: sticky;
   top: 40px;
 }
-
 
 /* ===== NAVEGAÇÃO ===== */
 
@@ -91,7 +86,6 @@ h2 {
   border-radius: 4px;
 }
 
-
 /* ===== FAVORITOS ===== */
 
 .favoritos-grid {
@@ -106,7 +100,6 @@ h2 {
   border: 1px solid #333;
 }
 
-
 /* ===== ESTATÍSTICAS ===== */
 
 .stats-box {
@@ -120,7 +113,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-
 /* ===== LIVROS ===== */
 
 .livro-item {
@@ -130,19 +122,35 @@ h2 {
   border-bottom: 1px solid #222;
 }
 
+/* Caixa que envolve SOMENTE a capa + physical separado abaixo */
+
 .capa-container {
   flex-shrink: 0;
+  width: 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.capa-container img {
+.capa-box {
+  width: 132px;
+  padding: 5px;
+  background-color: #151617;
+  border: 1px solid #2a2b2c;
+  border-radius: 3px;
+}
+
+.capa-box img {
   width: 120px;
   height: 180px;
+  display: block;
   object-fit: cover;
+  object-position: center;
   border: 1px solid #333;
   border-radius: 2px;
 }
 
-.sem-capa {
+.capa-box .sem-capa {
   width: 120px;
   height: 180px;
   border: 1px solid #333;
@@ -150,7 +158,39 @@ h2 {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+  text-align: center;
 }
+
+/* ===== FILTRO ROXO ===== */
+
+.roxo {
+  filter: brightness(0.5) sepia(1) hue-rotate(245deg) saturate(100%) contrast(120%);
+  transition: filter 0.3s ease;
+}
+
+.roxo:hover {
+  filter: none;
+}
+
+/* ===== PHYSICAL ===== */
+
+.physical-marker {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 7px;
+  border: 1px solid #514455;
+  background: linear-gradient(#48434b, #222025, #39343d);
+  color: #b79ac5;
+  font-size: 9px;
+  letter-spacing: 1px;
+  box-shadow:
+    inset 0 0 0 1px #7b6d80,
+    0 1px 2px #111;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ===== CONTEÚDO ===== */
 
 .conteudo-livro {
   flex-grow: 1;
@@ -158,17 +198,14 @@ h2 {
   flex-direction: column;
 }
 
-
 /* ===== DATA + FÍSICO/VIRTUAL ===== */
 
 .data-lido {
   display: flex;
   align-items: center;
   gap: 12px;
-
   font-size: 0.8rem;
   color: #888;
-
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -185,7 +222,6 @@ h2 {
 .tipo-leitura.virtual {
   color: #777;
 }
-
 
 /* ===== TÍTULO + AUTOR ===== */
 
@@ -214,110 +250,7 @@ h2 {
   color: #666;
 }
 
-.estrelas {
-  margin-left: 5px;
-  font-size: 1.1rem;
-}
-
-.star.filled {
-  color: #3182ce;
-}
-
-.star.empty {
-  color: #555;
-}
-
-
-/* ===== TAGS ===== */
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 15px;
-}
-
-.tag {
-  display: inline-block;
-
-  padding: 2px 7px;
-
-  background-color: #1a1b1c;
-  border: 1px solid #333;
-  border-radius: 3px;
-
-  color: #888;
-  font-size: 0.7rem;
-  line-height: 1.4;
-}
-
-
-/* ===== REVIEW ===== */
-
-.caixa-review {
-  background-color: #151617;
-  border: 1px solid #2a2b2c;
-  border-radius: 6px;
-  padding: 15px 20px;
-  font-size: 0.95rem;
-  color: #b0b0b0;
-}
-
-
-/* ===== ESPAÇAMENTO DOS ANOS ===== */
-
-.ano-section {
-  margin-bottom: 60px;
-}
-
-
-/* ===== BOTÃO TOPO ===== */
-
-.btn-topo {
-  margin-top: 30px;
-  width: 100%;
-  padding: 12px;
-
-  background-color: #151617;
-  color: #a0a0a0;
-
-  border: 1px dashed #333;
-
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.95rem;
-
-  cursor: pointer;
-  border-radius: 4px;
-
-  transition: all 0.2s ease;
-}
-
-.btn-topo:hover {
-  background-color: #3182ce;
-  color: #ffffff;
-  border-color: #3182ce;
-  border-style: solid;
-}
-
-
-/* ===== BLINK ===== */
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-.blink {
-  animation: blink 1s infinite;
-  color: inherit;
-}
-
+/* ===== ESTRELAS ===== */
 
 .estrelas {
   margin-left: 5px;
@@ -347,4 +280,82 @@ h2 {
   width: 50%;
   overflow: hidden;
   color: #7c5aa6;
+}
+
+/* ===== TAGS ===== */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 7px;
+  background-color: #1a1b1c;
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: #888;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+/* ===== REVIEW ===== */
+
+.caixa-review {
+  background-color: #151617;
+  border: 1px solid #2a2b2c;
+  border-radius: 6px;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* ===== ESPAÇAMENTO DOS ANOS ===== */
+
+.ano-section {
+  margin-bottom: 60px;
+}
+
+/* ===== BOTÃO TOPO ===== */
+
+.btn-topo {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background-color: #151617;
+  color: #a0a0a0;
+  border: 1px dashed #333;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-topo:hover {
+  background-color: #3182ce;
+  color: #ffffff;
+  border-color: #3182ce;
+  border-style: solid;
+}
+
+/* ===== BLINK ===== */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+  color: inherit;
 }

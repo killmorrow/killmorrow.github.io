@@ -119,11 +119,17 @@ async function carregarLivros() {
 
         article.innerHTML = `
           <div class="capa-container">
-            ${
-              livro.cover
-                ? `<img src="${escaparHTML(livro.cover)}" alt="Capa de ${titulo}">`
-                : `<div class="sem-capa">Sem Imagem</div>`
-            }
+
+            <div class="capa-box">
+              ${
+                livro.cover
+                  ? `<img class="roxo" src="${escaparHTML(livro.cover)}" alt="Capa de ${titulo}">`
+                  : `<div class="sem-capa">Sem Imagem</div>`
+              }
+            </div>
+
+            ${livro.physical ? `<div class="physical-marker">▣ PHYSICAL</div>` : ''}
+
           </div>
 
           <div class="conteudo-livro">

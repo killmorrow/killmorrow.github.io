@@ -65,7 +65,16 @@ async function carregarJogos() {
         
         article.innerHTML = `
           <div class="poster-container">
-            ${jogo.poster ? `<img src="${jogo.poster}" alt="Capa" class="capa-jogo">` : `<div class="sem-capa">Sem Imagem</div>`}
+
+            <div class="poster-box">
+              ${jogo.poster
+                ? `<img src="${jogo.poster}" alt="Capa" class="capa-jogo roxo">`
+                : `<div class="sem-capa">Sem Imagem</div>`
+              }
+            </div>
+
+            ${jogo.owned ? `<div class="owned-marker">▣ OWNED</div>` : ''}
+
           </div>
           
           <!-- 2. Reutilizamos o 'conteudo-filme' para garantir a foto do lado -->
@@ -77,7 +86,7 @@ async function carregarJogos() {
             <div class="cabecalho-filme">
               <h3>${jogo.title}</h3>
               
-              ${jogo.link !== '#' && jogo.link !== '' ? `<a href="${jogo.link}" target="_blank" class="btn-jogue">jogue!</a>` : ''}
+              ${jogo.link !== '#' && jogo.link !== '' ? `<a href="${jogo.link}" target="_blank" class="btn-jogue">check it out!</a>` : ''}
               
               <div class="estrelas">${estrelas}</div>
             </div>

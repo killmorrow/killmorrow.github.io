@@ -1,314 +1,602 @@
 @font-face {
+
   font-family: pixel;
+
   src: url(PixelForge.otf);
+
 }
 
 @font-face {
+
   font-family: retro;
+
   src: url(fonts/Retro-Gaming.ttf);
+
 }
+
+
+/* this applies to all the content */
 
 * {
-  color: var(--text-color);
-  font-family: pixel;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+    color: var(--text-color);
+
+    /* change the font here, it's set up to all use the same one */
+
+    font-family: pixel;
+
 }
+
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
 
 body {
+
   background-color: #0f1011;
+
   color: #a0a0a0;
+
   font-family: pixel;
+
   line-height: 1.5;
+
   padding: 40px 20px;
+
+  /* Aumentei a largura pra caber a barra lateral */
+
   max-width: 1100px;
+
   margin: 0 auto;
+
 }
+
 
 h1, h2 {
+
   font-family: pixel;
+
   color: #ffffff;
+
 }
+
 
 h1 {
+
   font-size: 2rem;
+
   margin-bottom: 20px;
+
 }
+
 
 h2 {
+
   font-size: 1.3rem;
+
   margin-bottom: 15px;
+
   border-bottom: 1px dotted #333;
+
   padding-bottom: 10px;
+
 }
+
+
+/* ===== LAYOUT DE COLUNAS ===== */
 
 .layout-principal {
+
   display: flex;
+
   gap: 50px;
+
+  /* Distância entre o diário e os favoritos */
+
   align-items: flex-start;
+
 }
+
 
 .coluna-esquerda {
+
   flex: 1;
+
+  /* Ocupa todo o espaço que sobrar */
+
 }
+
 
 .coluna-direita {
+
   width: 260px;
+
+  /* Largura fixa para os favoritos */
+
   position: sticky;
+
+  /* Faz a barra lateral te acompanhar no scroll */
+
   top: 40px;
+
 }
+
+
+/* ===== NAVEGAÇÃO DE ANOS ===== */
 
 .nav-anos {
+
   display: flex;
+
   gap: 15px;
+
   margin-bottom: 30px;
+
   border-top: 1px dotted #333;
+
   border-bottom: 1px dotted #333;
+
   padding: 15px 0;
+
 }
+
 
 .btn-ano {
+
   color: #a0a0a0;
+
   text-decoration: none;
+
   font-size: 1.1rem;
+
   padding: 5px 10px;
+
 }
+
 
 .btn-ano:hover {
+
   color: #ffffff;
+
   background-color: #1a1b1c;
+
   border-radius: 4px;
+
 }
+
+
+/* ===== FAVORITOS (DIREITA) ===== */
 
 .favoritos-grid {
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
+  /* Duas colunas pra fazer um 2x2 */
+
   gap: 10px;
+
 }
+
 
 .fav-card img {
+
   width: 100%;
+
   border-radius: 2px;
+
   border: 1px solid #333;
+
 }
+
+
+/* ===== ANIMES E REVIEWS (ESQUERDA) ===== */
 
 .stats-box {
+
   background-color: #1a1b1c;
+
   border: 1px solid #2a2b2c;
+
   border-radius: 4px;
+
   padding: 12px;
+
   text-align: center;
+
   font-size: 0.9rem;
+
   margin-bottom: 20px;
+
   letter-spacing: 1px;
+
 }
 
-.filme-item {
+
+.anime-item {
+
   display: flex;
+
   gap: 20px;
+
   padding: 30px 0;
+
   border-bottom: 1px solid #222;
+
 }
 
-/* =========================
-   PÔSTER
-   ========================= */
+
+/* ===== POSTER ===== */
 
 .poster-container {
-  flex-shrink: 0;
-  width: 152px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
 }
+
 
 .poster-box {
-  width: 152px;
-  padding: 5px;
-  background-color: #151617;
-  border: 1px solid #2a2b2c;
-  border-radius: 3px;
+
+    width: 132px;
+
+    padding: 5px;
+
+    background-color: #151617;
+
+    border: 1px solid #2a2b2c;
+
+    border-radius: 3px;
+
 }
 
-.poster-box .capa-jogo {
-  width: 140px;
-  height: 210px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border: 1px solid #333;
-  border-radius: 2px;
+
+.poster-box img {
+
+    width: 120px;
+
+    height: 180px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 1px solid #333;
+
+    border-radius: 2px;
+
 }
 
-/* Imagem sem capa */
-.poster-box .sem-capa {
-  width: 140px;
-  height: 210px;
+
+.sem-capa {
+
+  width: 120px;
+
+  height: 180px;
+
   border: 1px solid #333;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   font-size: 0.8rem;
-  text-align: center;
+
 }
 
-/* =========================
-   FILTRO ROXO
-   ========================= */
 
-.roxo {
-  filter: brightness(0.5) sepia(1) hue-rotate(245deg) saturate(100%) contrast(120%);
-  transition: filter 0.3s ease;
+/* ===== MARCADOR MANGA ===== */
+
+.manga-marker {
+
+    display: inline-block;
+
+    margin-top: 6px;
+
+    padding: 3px 7px;
+
+    border: 1px solid #514455;
+
+    background: linear-gradient(#48434b, #222025, #39343d);
+
+    color: #b79ac5;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+
+        inset 0 0 0 1px #7b6d80,
+
+        0 1px 2px #111;
+
+    text-align: center;
+
 }
 
-.roxo:hover {
-  filter: none;
-}
 
-/* =========================
-   OWNED
-   ========================= */
+/* ===== CONTEÚDO ===== */
 
-.owned-marker {
-  display: inline-block;
-  margin-top: 6px;
-  padding: 3px 7px;
-  border: 1px solid #514455;
-  background: linear-gradient(#48434b, #222025, #39343d);
-  color: #b79ac5;
-  font-size: 9px;
-  letter-spacing: 1px;
-  box-shadow:
-    inset 0 0 0 1px #7b6d80,
-    0 1px 2px #111;
-  text-align: center;
-  line-height: 1.2;
-}
+.conteudo-anime {
 
-/* =========================
-   CONTEÚDO
-   ========================= */
-
-.conteudo-filme {
   flex-grow: 1;
+
   display: flex;
+
   flex-direction: column;
+
 }
+
 
 .data-visto {
+
   font-size: 0.8rem;
+
   color: #888;
+
   text-transform: uppercase;
+
   margin-bottom: 8px;
+
 }
 
-.cabecalho-filme {
+
+.cabecalho-anime {
+
   display: flex;
+
   align-items: baseline;
+
   gap: 8px;
+
   margin-bottom: 15px;
+
 }
 
-.cabecalho-filme h3 {
+
+.cabecalho-anime h3 {
+
   font-family: pixel;
+
   color: #ffffff;
+
   font-size: 1.3rem;
+
   font-weight: bold;
+
 }
 
-.cabecalho-filme .ano {
+
+.cabecalho-anime .tipo-anime {
+
   font-size: 1rem;
+
   color: #999;
+
 }
+
+
+/* ===== INFORMAÇÕES DO ANIME ===== */
+
+.info-anime {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  font-size: 0.8rem;
+
+  color: #888;
+
+  text-transform: uppercase;
+
+}
+
+
+.info-anime span {
+
+  color: #888;
+
+}
+
+
+/* ===== REVIEW ===== */
 
 .caixa-review {
+
   background-color: #151617;
+
   border: 1px solid #2a2b2c;
+
   border-radius: 6px;
+
   padding: 15px 20px;
+
   font-size: 0.95rem;
+
   color: #b0b0b0;
+
 }
+
+
+/* Espaçamento extra no fim de cada ano */
 
 .ano-section {
+
   margin-bottom: 60px;
+
 }
 
-/* =========================
-   BOTÃO TOPO
-   ========================= */
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
 
 .btn-topo {
+
   margin-top: 30px;
+
   width: 100%;
+
   padding: 12px;
+
   background-color: #151617;
+
   color: #a0a0a0;
+
   border: 1px dashed #333;
+
   font-family: 'Courier New', Courier, monospace;
+
   font-size: 0.95rem;
+
   cursor: pointer;
+
   border-radius: 4px;
+
   transition: all 0.2s ease;
+
 }
+
 
 .btn-topo:hover {
+
   background-color: #3182ce;
+
   color: #ffffff;
+
   border-color: #3182ce;
+
   border-style: solid;
+
 }
 
-/* =========================
-   ESTRELAS
-   ========================= */
 
-.estrelas {
-  margin-left: 5px;
-  font-size: 1.1rem;
-  white-space: nowrap;
-}
-
-.star.filled {
-  color: #7c5aa6;
-}
-
-.star.empty {
-  color: #4a4650;
-}
-
-.star.half {
-  color: #4a4650;
-  position: relative;
-  display: inline-block;
-}
-
-.star.half::before {
-  content: "★";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  overflow: hidden;
-  color: #7c5aa6;
-}
-
-/* =========================
-   BLINK
-   ========================= */
+/* ===== BLINK ===== */
 
 @keyframes blink {
+
   0%, 100% {
+
     opacity: 1;
+
   }
 
   50% {
+
     opacity: 0;
+
   }
+
 }
 
+
 .blink {
+
   animation: blink 1s infinite;
+
   color: inherit;
+
+}
+
+
+/* ===== ESTRELAS ===== */
+
+.estrelas {
+
+  margin-left: 5px;
+
+  font-size: 1.1rem;
+
+  white-space: nowrap;
+
+}
+
+
+.star.filled {
+
+  color: #7c5aa6;
+
+}
+
+
+.star.empty {
+
+  color: #4a4650;
+
+}
+
+
+.star.half {
+
+  color: #4a4650;
+
+  position: relative;
+
+  display: inline-block;
+
+}
+
+
+.star.half::before {
+
+  content: "★";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 50%;
+
+  overflow: hidden;
+
+  color: #7c5aa6;
+
+}
+
+
+/* ===== POSTER ROXO ===== */
+
+.roxo {
+
+    filter:
+
+        brightness(0.5)
+
+        sepia(1)
+
+        hue-rotate(245deg)
+
+        saturate(100%)
+
+        contrast(120%);
+
+    transition: filter 0.3s ease;
+
+}
+
+
+.roxo:hover {
+
+    filter: none;
+
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>diário animes</title>
+
+  <link rel="stylesheet" href="animes/anime.css">
+
+</head>
+
+<body>
+
+  <!-- Contêiner que divide a tela em esquerda e direita -->
+
+  <div class="layout-principal">
+
+    <!-- COLUNA ESQUERDA (Diário e Anos) -->
+
+    <main class="coluna-esquerda">
+
+      <h1>📺 diário de animes<span class="blink">_</span></h1>
+
+      <!-- Onde os botões de anos vão aparecer -->
+
+      <nav id="nav-anos" class="nav-anos"></nav>
+
+      <!-- Onde as reviews vão aparecer -->
+
+      <div id="container-dos-animes"></div>
+
+    </main>
+
+
+    <!-- COLUNA DIREITA (Favoritos) -->
+
+    <aside class="coluna-direita">
+
+      <h2 class="blink">meus favs!!</h2>
+
+      <!-- Substitua os links abaixo pelos seus favoritos -->
+
+      <div class="favoritos-grid">
+
+        <div class="roxo fav-card">
+            <a href="https://anilist.co/anime/5114/Hagane-no-Renkinjutsushi-FULLMETAL-ALCHEMIST">
+                <img src="https://media.kitsu.app/anime/poster_images/100/large.jpg" alt="Favorito 1">
+            </a>
+        </div>
+
+        <div class="roxo fav-card">
+            <a href="https://anilist.co/anime/11061/HUNTERHUNTER-2011">
+                <img src="https://media.kitsu.app/anime/poster_images/6448/large.jpg" alt="Favorito 2">
+            </a>
+        </div>
+
+        <div class="roxo fav-card">
+            <a href="https://anilist.co/anime/14719/JoJo-no-Kimyou-na-Bouken-TV">
+                <img src="https://media.kitsu.app/anime/7158/poster_image/large-9e79f5c290ae821d2141473e6fdb6532.jpeg" alt="Favorito 3">
+            </a>
+        </div>
+
+        <div class="roxo fav-card">
+            <a href="https://anilist.co/anime/21804/Saiki-Kusuo-no-nan">
+                <img width="100px" src="https://media.kitsu.app/anime/12127/poster_image/large-ad385de004aab787429f866b59c340e4.jpeg" alt="Favorito 4">
+            </a>  
+        </div>
+
+      </div>
+
+      <button id="btn-topo" class="btn-topo">↑ voltar ao topo</button>
+
+    </aside>
+
+  </div>
+
+
+  <script src="animes/anime.js"></script>
+
+  <script src="../script.js" defer></script>
+
+</body>
+
+</html>

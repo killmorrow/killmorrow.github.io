@@ -35,7 +35,7 @@
     font-size: 70px;
     font-family: centrion;
     position: absolute;
-    right: 15px;
+    left: 15px;
     bottom: 2px;
     margin: 0;
     color: #000000;
@@ -873,4 +873,35 @@ textarea {
     max-height: 80px;
     padding:10px;
     font-size: 12px;
+}
+
+
+.todo{
+    position: absolute;
+    z-index: 10;
+    top: 950px;
+    left: -150px;
+    width: 330px;
+    height:300px;
+    transform: rotate(-25deg) scale(0.9);
+    opacity: 0.7;
+
+    filter:
+        sepia(15%)
+        saturate(130%)
+        hue-rotate(225deg)
+        brightness(92%)
+        contrast(105%)
+        drop-shadow(0 1px 1px #3f1f74)
+        drop-shadow(2px 3px 2px #32214d);
+
+}
+
+.todotext{
+    position:absolute;
+    left: -70px;
+    top:1010px;
+    z-index: 10;
+    transform: rotate(-25deg);
+    opacity:0.7;
 }
