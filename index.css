@@ -652,7 +652,7 @@ textarea {
     top: 210px;
     left: 575px;
 
-    width: 260px;
+    width: 270px;
     height: auto;
     filter: hue-rotate(-20deg);
 
@@ -668,8 +668,8 @@ textarea {
     z-index: 11;
 
     transform: rotate(-10deg);
-    top: 235px;
-    left: 250px;
+    top: 255px;
+    left: 230px;
 
     width: 140px;
     height: auto;
@@ -727,7 +727,7 @@ textarea {
     z-index: 10;
 
     top: 723px;
-    left: 190px;
+    left: 175px;
 
     width: 215px;
     height: auto;
