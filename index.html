@@ -164,7 +164,7 @@
             <img src="images/new/updates.png">
             <h3>change log</h3>
             <div>
-               <div class="rolagem roxo" id="updates"></div>
+               <div class="transp rolagem roxo" id="updates"></div>
             </div>
         
         </section>
@@ -598,6 +598,30 @@ window.addEventListener("resize", function() {
 </script>
 
 <script src="2nds/script.js" defer></script>
+
+<script>
+function resizeSite() {
+    const site = document.querySelector('.site');
+
+    if (!site) return;
+
+    const baseWidth = 1920;
+    const baseHeight = 1080;
+
+    const scaleX = window.innerWidth / baseWidth;
+    const scaleY = window.innerHeight / baseHeight;
+
+    const scale = Math.min(scaleX, scaleY);
+
+    site.style.setProperty('--site-scale', scale);
+}
+
+window.addEventListener('resize', resizeSite);
+window.addEventListener('load', resizeSite);
+
+resizeSite();
+</script>
+</script>
 </body>
 </html>
 

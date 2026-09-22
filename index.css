@@ -51,53 +51,36 @@ body {
 }
 
 body {
-    background: #ffffff;
+    background: #c9b9d3;
     overflow: hidden;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-/* =========================================================
-   PRANCHETA PRINCIPAL
-   ========================================================= */
-
-/*
-    A arte original é 1536 × 1024
-    proporção = 3 / 2
-
-    A altura é a referência principal.
-
-    Em um monitor normal:
-        ocupa praticamente toda a altura.
-
-    Em ultrawide:
-        mantém o tamanho/proporção e fica centralizado.
-*/
-
-
-
 .site {
     position: relative;
-    width: min(100vw, 150vh);
-    height: min(100vh, 66.6667vw);
-    aspect-ratio: 16/10;
+    width: 1920px;
+    height: 1080px;
+    flex-shrink: 0;
 
     background-image: url('images/new/teste.png');
     background-repeat: no-repeat;
     background-size: 115% 110%;
     background-position: auto 20px;
-    
+
     overflow: hidden;
+
+    transform: scale(var(--site-scale, 1));
+    transform-origin: center center;
+
+    box-shadow: 0 0 18px rgba(88, 51, 128, 0.35);
+    filter: drop-shadow(0 5px 10px rgba(88, 51, 128, 0.7));
 }
 
 .site > * {
     filter: drop-shadow(0 5px 10px rgba(88, 51, 128, 0.7));
-
 }
-
 
 
 
@@ -232,7 +215,7 @@ body {
     font-family: ledlight;
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 23%;
     transform: translate(-50%, -50%);
     margin: 0;
 }
@@ -240,7 +223,7 @@ body {
 .webring {
     position: absolute;
     top: 55%;
-    left: 30%;
+    left: 26%;
     transform: translate(-50%, -50%);
     margin: 0;
     width: 200px;
@@ -270,7 +253,7 @@ body {
     position: absolute;
     font-size: 40px;
     top: 17%;
-    left: 20%;
+    left: 17%;
     transform: rotate(-5deg);
     margin: 0;
 
@@ -280,7 +263,7 @@ body {
 .welcome {
     position: absolute;
     top: 25%;
-    left: 13%;
+    left: 10%;
     transform: rotate(-5deg);;
     margin: 0;
     width: 200px;
@@ -292,11 +275,11 @@ body {
    ========================================================= */
 
 .art-mirror {
-    left: 40%;
-    top: 5%;
+    left: 38%;
+    top: 4%;
 
-    width: 24.2%;
-    height: 60%;
+    width: 24%;
+    height: 70%;
 
     border-radius: 25%;
 
@@ -331,9 +314,10 @@ body {
 .panel-right-top div {
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 22%;
     padding: 0;
     margin: 0;
+    zoom:0.95;
 }
 
 .panel-right-top div img,
@@ -387,7 +371,7 @@ body {
     font-size: 30px;
     position: absolute;
     top: 17%;
-    left: 35%;
+    left: 30%;
     transform: rotate(5deg);
     margin: 0;
 }
@@ -395,8 +379,8 @@ body {
 .panel-right-bottom > div {
     position: absolute;
     width: 390px;
-    top: 17%;
-    left: 5%;
+    top: 16%;
+    left: 3%;
     padding: 0;
     margin: 0;
     transform: scale(0.7)
@@ -533,7 +517,7 @@ body {
     left: 55%;
     top: 65%;
     width: 9.5%;
-    height: 19%;
+    height: 21%;
     
     border: none;
     z-index: 999999;
@@ -545,12 +529,11 @@ body {
    ========================================================= */
 
 .art-cat-right {
-    left: 91%;
+    left: 88%;
     top: 17%;
-    width: 9.5%;
-    height: 55%;
+    width: 12.5%;
+    height: 60%;
 
-    border: none;
 }
 
 
@@ -905,9 +888,9 @@ body {
 .shadow {
     position: absolute;
     pointer-events: none;
-    width: 5%;
-    top: 58%;
-    left:63%;
+    width: 10%;
+    top: 62%;
+    left:65%;
     transform:rotate(-25deg)
 }
 
@@ -923,7 +906,7 @@ body {
     height: 200px;
     z-index: 10;
     transform:rotate(-5deg);
-    line-height: 12px;
+    line-height: 10px;
 }
 
 .logs * {
@@ -936,8 +919,8 @@ body {
 .neigh {
     position:absolute;
     top: 93%;
-    left: 5.5%;
-    width: 380px;
+    left: 6%;
+    width: 410px;
     z-index: 10;
 
     -webkit-mask-image: linear-gradient(
@@ -970,13 +953,13 @@ body {
   mask-image: radial-gradient(
     ellipse at center, 
     black 40%, 
-    transparent 70%
+    transparent 90%
   );
   
   -webkit-mask-image: radial-gradient(
     ellipse at center, 
     black 40%, 
-    transparent 70%
+    transparent 90%
   );
   mask-composite: intersect;
 }
@@ -1064,8 +1047,8 @@ body {
 
 .visitor {
     position: absolute;
-    top: 90%;
-    left: 43%;
+    top: 90.5%;
+    left: 46%;
     z-index: 999;
 
     display: flex;
