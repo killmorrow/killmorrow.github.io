@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: novem;
-    src: url(fonts/novem___.ttf);
+    src: url(../fonts/novem___.ttf);
 }
 
 @font-face {
     font-family: pixel;
-    src: url(fonts/PixelForge.otf);
+    src: url(../fonts/PixelForge.otf);
 }
 
 :root {

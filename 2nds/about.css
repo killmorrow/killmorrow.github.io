@@ -1,22 +1,22 @@
 @font-face {
   font-family: pixel;
-  src: url(fonts/PixelForge.otf);
+  src: url(../fonts/PixelForge.otf);
 }
 
 @font-face {
   font-family: inked;
-  src: url(fonts/inkedgod.ttf);
+  src: url(../fonts/inkedgod.ttf);
 }
 
 @font-face {
   font-family: centrion;
-  src: url(fonts/centrion.ttf);
+  src: url(../fonts/centrion.ttf);
 }
 
 
 @font-face {
   font-family: yoshiro;
-  src: url(fonts/yoshiro.otf);
+  src: url(../fonts/yoshiro.otf);
 }
 
 * {
@@ -92,7 +92,7 @@ body {
 
 body {
 
-    background-image: url("images/layout/4.png");
+    background-image: url("../images/layout/4.png");
 
     background-repeat: repeat;
 
@@ -112,7 +112,7 @@ body {
             rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0.4)
         ),
-        url("images/layout/1.png");
+        url("../images/layout/1.png");
 
     display: flex;
     flex-direction: column;
@@ -137,7 +137,7 @@ body {
     width: 400px;
     height: 730px;
     flex-shrink: 0;
-    background-image: url(images/layout/3.jpg);
+    background-image: url(../images/layout/3.jpg);
 
     border: 3px solid #e5d9eb;
     border-radius: 30px 5px 30px 5px;
@@ -160,7 +160,7 @@ body {
 .central::before {
     content: "";
 
-    background-image: url("images/layout/papel.png");
+    background-image: url("../images/layout/papel.png");
     background-size: 70% 90%;
     background-repeat: no-repeat;
 
@@ -187,7 +187,7 @@ body {
     width: 100%;
     height: 275px;
     flex-shrink: 0;
-    background-image: url(images/layout/3.jpg);
+    background-image: url(../images/layout/3.jpg);
     display: flex;
     flex-direction: row;
 
@@ -231,7 +231,7 @@ body {
 
     height: 12px;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/layout/5.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/layout/5.png");
 
     background-repeat: repeat-x;
 
@@ -289,7 +289,7 @@ body {
 .sidebox{
     margin: 10px;
     padding: 15px;
-    background-image: url("images/layout/1.png");
+    background-image: url("../images/layout/1.png");
     border-radius: 30px 5px 30px 5px;
     
 }
@@ -434,7 +434,7 @@ body {
 .lastbox{
     margin: 10px;
     padding: 15px;
-    background-image: url("images/layout/1.png");
+    background-image: url("../images/layout/1.png");
     display: flex;
     flex-direction: row;
     border-radius: 30px 5px 30px 5px;
@@ -497,3 +497,144 @@ body {
     align-items: center;
 }
 
+
+
+
+
+
+.navbar {
+    position: absolute;
+    top: -5%;
+    left: auto;
+    transform: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    flex-shrink: 0;
+
+    z-index: 9999;
+}
+
+.nav-item {
+    position: relative;
+    z-index: 999999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    padding: 8px 22px;
+
+    border: 2px solid #514455;
+    border-radius: 5px;
+
+    background: linear-gradient(
+        #48434b,
+        #222025,
+        #39343d
+    );
+
+    color: #b79ac5;
+
+    box-shadow:
+        inset 0 1px 2px #7b6d80,
+        0 2px 3px #111;
+
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: linear-gradient(
+        #5a535f,
+        #29252d,
+        #48414e
+    );
+
+    color: #eadcf0;
+}
+
+.nav-item.active {
+    background: linear-gradient(
+        #39343d,
+        #222025,
+        #48434b
+    );
+
+    color: #d8c3e2;
+
+    border-color: #514455;
+
+    box-shadow:
+        inset 0 2px 3px #111,
+        0 1px 2px #000;
+}
+
+
+
+
+.bottom {
+    position: relative;
+    z-index: 999999;
+
+    display: block;
+    text-align: center;
+
+    height: auto;
+    padding: 8px 10px;
+
+    border: 2px solid #514455;
+    border-radius: 10px;
+
+    background: linear-gradient(
+    #48434b 0%,
+    #222025 25%,
+    #222025 75%,
+    #39343d 100%
+    );
+
+    color: #b79ac5;
+
+    box-shadow:
+        inset 0 1px 2px #7b6d80,
+        0 2px 3px #111;
+
+    font-size: 15px;
+}
+
+.button-copies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.button-copy img {
+    display: block;
+}
+
+.button-copy button {
+    padding: 3px 8px;
+    border: 2px solid #514455;
+    border-radius: 4px;
+    background: linear-gradient(
+        #48434b,
+        #222025,
+        #39343d
+    );
+    color: #b79ac5;
+    cursor: pointer;
+}

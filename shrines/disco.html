@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <div class="disco-wrapper">
         <div class="sidebar-area">
             <div class="under-gif-wrapper">
@@ -217,19 +218,17 @@
 
      
         function task(chave) {
-            const caixaDialogo = document.getElementById('dialogue-area');
-            const caixaRespostas = document.getElementById('responses-area');
+    const caixaDialogo = document.getElementById('dialogue-area');
+    const caixaRespostas = document.getElementById('responses-area');
 
-            if (tasks[chave]) {
-                caixaDialogo.innerHTML = tasks[chave].texto;
+    if (tasks[chave]) {
+        caixaDialogo.innerHTML = tasks[chave].texto;
+        caixaRespostas.innerHTML = tasks[chave].opcoes;
 
-                // Atualiza as opções de resposta lá embaixo
-                caixaRespostas.innerHTML = tasks[chave].opcoes;
-
-                // Faz a tela rolar automaticamente para o final para ver o texto novo
-                caixaDialogo.scrollTop = caixaDialogo.scrollHeight;
-            }
-        }
+        // Começa a nova quest pelo topo
+        caixaDialogo.scrollTop = 0;
+    }
+}
     </script>
 
 </body>

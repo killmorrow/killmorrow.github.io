@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webmaster</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="2nds/about.css">
 </head>
 
 <body>
+
+    
 
     <div class="site">
         <div class="roxo">
@@ -16,7 +18,19 @@
         </div>
         
         <h1 class="page">about me</h1>
-        <div class="topo">
+
+
+        <nav class="navbar">
+                <a class="nav-item" href="index.html">home</a>
+                <a class="nav-item active" href="about.html">about</a>
+                <a class="nav-item" href="blog.html">blog</a>
+                <a class="nav-item" href="shrines.html">shrines</a>
+                <a class="nav-item" href="portfolio.html">portfolio</a>
+                <a class="nav-item" href="scrapbook.html">scrapbook</a>
+                <a class="nav-item" href="links.html">links</a>
+        </nav>
+
+            <div class="topo">
 
             <div class="sidebar">
                 <div class="sidebox">
@@ -35,15 +49,17 @@
                 <div class="sidebox">
                     <div class="caixa">
                         <div class="roxo rolagem3">
-                            <h1 class="titulo">21 ⛧ any pronouns</h1>
-                            <img width="50%" src="images/about/brazilian.png">
+                            <h1 class="titulo">21 ⛧ any pronouns</h1><br>
+                            <br>
+                            <img width="49%" src="images/about/brazilian.png">
+                            <img width="49%" src="images/about/unlabeled.png">
                             <img width="40%" src="images/about/entp.jpg">
-                            <img width="50%" src="images/about/unlabeled.png">
-                            <br><p>yes i peaked during the pandemic.<br> how did you guess?</p><br>
-                            <br><p></p><br>
+                            <br><br><p>yes i peaked during the pandemic.<br> how did you guess?</p><br>
+                            <br><p></p>
                             <h1 class="titulo blink">contact me:</h1>
-                            <br><img height=20px src="data:image/png;base64,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"> <p>killmorrow@proton.me</p>
+                            <br><img height=20px src="data:image/png;base64,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"> <p>killmorrow [at] proton [dot] me</p>
                             <br><img height=20px src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkzJVwWrkC2-seIj0mbrzSvS5liMXX_fDAx8F0nJi8jw&s=10"> <p>@killmorrow</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -134,8 +150,27 @@
             </div>
         </div>
 
-    </div>
 
-    <script src="script.js" defer></script>
+        <div class="bottom">
+            
+            <h1 class="titulo blink">add my button:</h1><br><p></p><br>
+                <div class="button-copies">
+
+                    <div class="button-copy">
+                        <img width="88" src="buttons/button.gif" alt="kill">
+                        <button onclick="copyCode('code1')">COPY</button>
+                    </div>
+
+                    <div class="button-copy">
+                        <img width="88" src="buttons/claro.gif" alt="kill">
+                        <button onclick="copyCode('code2')">COPY</button>
+                    </div>
+                </div>
+
+                <br><p>hot linking is advised :) i change them a lot...</p>
+           
+        </div>
+
+    <script src="2nds/script.js" defer></script>
 </body>
 </html>

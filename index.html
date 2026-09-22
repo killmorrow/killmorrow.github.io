@@ -1,248 +1,327 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kill's Garden</title>
+    <title>Killmorrow</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <div class="site">
-        <header class="header">
-            <div class="frame">
-                <div class="real">
-                    <h1 class="titulo-garden"><span class="blink">_</span>Kill's Garden</h1>
-                </div>
-                <img class="todo" src="images/todo.png">
-                <div class="todotext">
-                    <h3>to-do list...</h3>
-                    <p>> change some effects <br>> add a scrapbook page <br>> finish portfolio page </p>
-                </div>
+    <main class="site">
+
+        <div class="music-bar">
+
+            <button class="music-button" id="prev">◀</button>
+
+            <button class="music-button" id="play">▶</button>
+
+            <button class="music-button" id="next">▶</button>
+
+            <div class="music-info">
+                <span class="music-title" id="music-title">Killmorrow Radio</span>
+                <span class="music-artist">now playing</span>
             </div>
-        </header>
 
+            <div class="music-progress" id="progress">
+                <div class="music-progress-fill" id="progress-fill"></div>
+            </div>
 
-        <div class="central">
-            <aside class="sidebar">
-                <div class="frame">
-                    <h3 class="titulo-metal">webrings</h3>
-                    <div class="real">
-                        
-                        <div style="text-align: center;" class="rolagem">
+            <span class="music-time" id="music-time">
+                0:00 / 0:00
+            </span>
+
+            <button class="music-button" id="mute">🔊</button>
+
+            <div class="marquee">
+                    <div class="marquee-track roxo">
+                        <a href="#"><img src="blinkies/self.gif"></a>
+                        <a href="#"><img src="blinkies/bad.gif"></a>
+                        <a href="#"><img src="blinkies/rawr.gif"></a>
+                        <a href="#"><img src="blinkies/morning.gif"></a>
+                        <a href="#"><img src="blinkies/pirate.gif"></a>
+                        <a href="#"><img src="blinkies/love.gif"></a>
+                        <a href="#"><img src="blinkies/morning.gif"></a>
+                        <a href="#"><img src="blinkies/f-ai.gif"></a>
+                        <a href="#"><img src="blinkies/urnotreal.gif"></a>
+                        <a href="#"><img src="blinkies/gottagofast.gif"></a>
+                        <a href="#"><img src="blinkies/hewo.gif"></a>
+                        <a href="#"><img src="blinkies/danger-to-society.gif"></a>
+                        <a href="#"><img src="blinkies/luvmyputer.gif"></a>
+                        <a href="#"><img src="blinkies/eepy.gif"></a>
+                        <a href="#"><img src="blinkies/proud_dork.gif"></a>
+                        <a href="#"><img src="blinkies/yipee.gif" width="150px"></a>
+                        <a href="#"><img src="blinkies/vampire.gif" width="150px"></a>
+                        <a href="#"><img src="blinkies/x6.gif"></a>
+                        <a href="#"><img src="blinkies/dvdcrazy.gif"></a>
+
+                        <!-- repetição -->
+                        <a href="#"><img src="blinkies/self.gif"></a>
+                        <a href="#"><img src="blinkies/bad.gif"></a>
+                        <a href="#"><img src="blinkies/rawr.gif"></a>
+                        <a href="#"><img src="blinkies/morning.gif"></a>
+                        <a href="#"><img src="blinkies/pirate.gif"></a>
+                        <a href="#"><img src="blinkies/love.gif"></a>
+                        <a href="#"><img src="blinkies/morning.gif"></a>
+                        <a href="#"><img src="blinkies/f-ai.gif"></a>
+                        <a href="#"><img src="blinkies/urnotreal.gif"></a>
+                        <a href="#"><img src="blinkies/gottagofast.gif"></a>
+                        <a href="#"><img src="blinkies/hewo.gif"></a>
+                        <a href="#"><img src="blinkies/danger-to-society.gif"></a>
+                        <a href="#"><img src="blinkies/luvmyputer.gif"></a>
+                        <a href="#"><img src="blinkies/eepy.gif"></a>
+                        <a href="#"><img src="blinkies/proud_dork.gif"></a>
+                        <a href="#"><img src="blinkies/yipee.gif" width="150px"></a>
+                        <a href="#"><img src="blinkies/vampire.gif" width="150px"></a>
+                        <a href="#"><img src="blinkies/x6.gif"></a>
+                        <a href="#"><img src="blinkies/dvdcrazy.gif"></a>
+                    </div>
+            </div>
+
+        </div>
+
+        
+        <!-- =========================
+             ELEMENTOS DECORATIVOS
+             ========================= -->
+
+        <img class="osagiri roxoimg" src="images/3.png">
+        <img class="shmilk roxoimg" src="images/1.png">
+        <img class="osagiri2 roxoimg" src="images/shmilk.png">
+        <img class="shadow roxoimg" src="images/4.png">
+
+        <a href="blog.html" class="link"><img class="art art-castle animado" src="images/new/blog.png"></a>
+        <a href="https://killmorrow.atabook.org/" class="link"><img class="art art-scroll animado" src="images/new/guestbook.png"></a>
+
+        
+        <div style="position:absolute; top:7%; left: 92.8%; z-index: 2; text-align: center; transform: rotate(-5deg);">
+            <p>say<br>hi<br>:D</p>
+        </div>
+        
+                <!-- =========================
+             BLOCO ESQUERDO
+             ========================= -->
+
+        <section class="panel panel-left animado">
+            <img src="images/new/webrings.png">
+            <h2>⚝ webrings !</h2>
+            <div style="text-align: center;" class="webring roxo rolagem">
                             <br>
                             <div id='gfdkris'> <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script><script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script></div>
                             <p></p><br><hr><br><p></p>
                             <div id='sogma'><script type="text/javascript" src="https://huroncelestial.neocities.org/onionring-variables.js"></script><script type="text/javascript" src="https://huroncelestial.neocities.org/onionring-widget.js"></script><link rel="stylesheet" href="https://huroncelestial.neocities.org/onionring.css"></div>
                             <p></p><br><p></p><hr><p></p>
-                            <div style="height: 100px; display: flex; justify-content: center;align-items: center;gap: 20px"><a href="https://evehibi.nekoweb.org/ckwr/?action=previous"><--</a> // <a href="https://evehibi.nekoweb.org/ckwr/"><img src="images/shmilk.png" height="60rem"></a> // <a href="https://evehibi.nekoweb.org/ckwr/?action=next">--></a></div>
+                            <div style="height: 100px; display: flex; justify-content: center;align-items: center;gap: 20px"><a href="https://evehibi.nekoweb.org/ckwr/?action=previous"><--</a> // <a href="https://evehibi.nekoweb.org/ckwr/"><img src="images/vanilla.webp" height="60rem"></a> // <a href="https://evehibi.nekoweb.org/ckwr/?action=next">--></a></div>
                             <p></p><hr><br><p></p>
                             <div style="display:grid;place-items:center"><a href="https://nanacore.net/cliques/brs"><img src="https://nanacore.net/imgs/brs/bandeira.png" title="Esse site faz parte do WebCírculo BR!" alt="Esse site faz parte do WebCírculo BR!"></a><a href="https://nanacore.net/cliques/brs?action=random">random</a></div>
                             <p></p><br><hr><br><p></p>
                             <script defer src="https://saikikusuo.nekoweb.org/webring/webringscript.js"></script>
                             <p></p><br><hr><br><p></p>
                             <a href="https://ivorysroses2.nekoweb.org/SonicWebring.html"><img src="https://i.pinimg.com/originals/83/b4/ec/83b4ecb7c92e56c3a8df9e0a6c4b429e.gif" width="70px"></a><br /><a href="https://ivorysroses2.nekoweb.org/SonicWebring.html">previous</a> <a href="https://ivorysroses2.nekoweb.org/SonicWebring.html">random</a> <a href="https://ivorysroses.nekoweb.org/index.html">next</a>
-                        </div>
+            </div>
+        </section>
+
+        <section class="panel panel-left-top animado">
+            <img src="images/new/welcome.png">
+            <h1>welcome !</h1>
+            <div class="rolagem welcome">
+                <p>hello!! im a 21yo brazilian who loves purple and some geek stuff.<br>
+                <br> if it's not your first time here, press ctrl + shift + r to refresh the page. i make huuuuge changes out of nowhere, so you should do that everytime you visit to keep up with the new layouts.<br>
+                <br>i use this site to express myself so it's a forever WIP, pls dont mind the messy. this is coded on firefox and a 34" monitor so i apologize if things look weird on ur end.<br>
+                <br>mobile users, i swear i'll make u a version someday... don't ask me when tho >.<<br>
+                <br>anyways, i hope you enjoy roaming around here even tho its unfinished :3<br>
+                <br>it's completely SFW but please don't interact if you're under 16...</p>
+            </div>
+        </section>
+
+        <!-- =========================
+             ESPELHO CENTRAL
+             ========================= -->
+
+        <a href="about.html" class="link"><img class="art art-mirror animado" src="images/new/about.png"></a>
+
+        <!-- =========================
+             BLOCO DIREITO SUPERIOR
+             ========================= -->
+
+        <section class="panel panel-right-top animado">
+            <img src="images/new/currently.png">
+            <h2>i am currently...</h2>
+            <div class="roxo">
+              <img src="images/console.gif"> <p>playing:</p><br> <p class="currently">ace attorney PW trilogy</p><br>
+              <img src="images/disc.gif"> <p >watching:</p><br> <p class="currently">kabaneri of the iron fortress, yani neko</p><br>
+              <img src="images/book.gif"> <p>reading:</p><br> <p class="currently">...</p><br>
+              <img src="images/person.gif"> <p>obsessed with:</p><br> <p class="currently">wilerunner</p><br>
+            </div>
+        </section>
+
+        <!-- =========================
+             BLOCO DIREITO INFERIOR
+             ========================= -->
+
+        <section class="panel panel-right-bottom animado">
+            <img src="images/new/updates.png">
+            <h3>change log</h3>
+            <div>
+               <div class="rolagem roxo" id="updates"></div>
+            </div>
+        
+        </section>
+
+        <!-- =========================
+             BLOCO CENTRAL INFERIOR
+             ========================= -->
+
+        <section class="panel panel-center">
+            <div>
+                <div class="marquee">
+                    <div class="marquee-track rapida roxo">
+                        <a href="https://shishka.neocities.org"><img src="/buttons/sa2.png" title="shiska" width="88" height="31"></a>
+                        <a href="https://feign.neocities.org"><img src="/buttons/hank.gif" title="feign" width="88" height="31"></a>
+                        <a href="https://mesoscale.neocities.org/"><img src="/buttons/linux_powered.gif" title="mesoscale" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/1bw30.gif" title="." width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/3passion.jpg" title="." width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/a122.gif" title="." width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/brazil8831.png" title="." width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/fuck.webp" title="." width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/horse.webp" title="." width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/kuromi.gif" title="." width="88" height="31"></a>
+
+                        <!-- repetição -->
+                        <a href="https://shishka.neocities.org"><img src="/buttons/sa2.png" width="88" height="31"></a>
+                        <a href="https://feign.neocities.org"><img src="/buttons/hank.gif" width="88" height="31"></a>
+                        <a href="https://mesoscale.neocities.org/"><img src="/buttons/linux_powered.gif" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/1bw30.gif" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/3passion.jpg" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/a122.gif" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/brazil8831.png" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/fuck.webp" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/horse.webp" width="88" height="31"></a>
+                        <a href="#"><img src="/buttons/kuromi.gif" width="88" height="31"></a>
                     </div>
-
-                    <h3 class="titulo-metal">quick thought</h3>
-                        <div class="real">
-                            <div class="caixa3 dps">
-                                <div class="dps titulo-claro" id="statuscafe-username"></div>
-                                <div id="statuscafe-content"></div>
-                                <script src="https://status.cafe/current-status.js?name=killmorrow" defer></script>
-                            </div>
-                        </div>
-
-                    <h3 class="titulo-metal">recent updates</h3>
-                    <div class="real">
-                        <div class="rolagem" id="updates"></div>
-                    </div>
-
-                  
-
                 </div>
 
-            </aside>
+                <div class="marquee">
+                    <div class="marquee-track rapida roxo">
+                        <a href="#"><img src="/stamps/miku.gif"></a>
+                        <a href="#"><img src="/stamps/blue.png"></a>
+                        <a href="#"><img src="/stamps/cats.gif" width="99" height="56"></a>
+                        <a href="#"><img src="/stamps/goth.png"></a>
+                        <a href="#"><img src="/stamps/gays.webp"></a>
+                        <a href="#"><img src="/stamps/kitty-stamp.gif"></a>
+                        <a href="#"><img src="/stamps/grell.png"></a>
+                        <a href="#"><img src="/stamps/unndertale.gif"></a>
+                        <a href="#"><img src="/stamps/sonic.png"></a>
 
-            <main class="middle">
-                <img class="osagiri1" src="images/over/1.png">
-                <img class="shadow" src="images/over/4.png">
-                <img class="shmilk" src="images/over/shmilk.png">
-                <img class="osagiri2" src="images/over/2.png">
-                <img class="envy" src="images/over/3.png">
-                <img class="vanilla" src="images/over/vanilla.webp">
-
-                <div class="frame">
-
-                    <div class="real">
-                        <p class="welcome"> welcome! </p>
-                        <div class="caixa">
-                                <p><br>hello!! im a 21yo brazilian who loves purple and some geek stuff.<br>
-                                    <br> if it's not your first time here, press ctrl + shift + r to refresh the page. i make giant changes out of nowhere, so you should that everytime you visit to keep up with the new version.<br>
-                                    <br>i use this site to express myself so it's a forever WIP, pls dont mind the messy. this is coded on firefox and a 34" monitor so i apologize if things look weird on ur end.<br>
-                                    <br>mobile users, i swear i'll make u a version someday... don't ask me when tho >.<<br>
-                                    <br>anyways, i hope you enjoy roaming around here even tho its unfinished :3<br>
-                                    <br>it's completely SFW but please don't interact if you're under 16.</p>
-                        </div>
+                        <!-- repetição -->
+                        <a href="#"><img src="/stamps/miku.gif"></a>
+                        <a href="#"><img src="/stamps/blue.png"></a>
+                        <a href="#"><img src="/stamps/cats.gif" width="99" height="56"></a>
+                        <a href="#"><img src="/stamps/goth.png"></a>
+                        <a href="#"><img src="/stamps/gays.webp"></a>
+                        <a href="#"><img src="/stamps/kitty-stamp.gif"></a>
+                        <a href="#"><img src="/stamps/grell.png"></a>
+                        <a href="#"><img src="/stamps/unndertale.gif"></a>
+                        <a href="#"><img src="/stamps/sonic.png"></a>
                     </div>
-
-                    <div class="real">
-                        <p class="neigh"> my neighbors! </p>
-                            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 7px;">
-                                <a target="_blank" href="https://keiism.neocities.org"><img class="filtro" src="buttons/x/keiism.png" alt="Keiism's quiet zone"></a>
-                                <a target="_blank" href="https://thehappygarden.neocities.org/"><img class="filtro" src="buttons/x/garden.png" alt="The Happy Garden"></a>
-                                <a target="_blank" href="https://nanacore.net/"><img class="filtro" src="https://nanacore.net/imgs/buttons/nanacore.gif" alt="nanacore"></a>
-                                <a target="_blank" href="https://umidunite.neocities.org/"><img class="filtro" src="https://umidunite.neocities.org/umidunite_images/umidunite-button.gif" alt="umi.dunite"></a>
-                                <a target="_blank" href="https://cyberstheb.neocities.org/"><img class="filtro" src="buttons/x/stheb.gif" alt="cyberstheb"></a>
-                            </div>
-                    </div>
-
-                    <div class="real">
-                        <p class="aviso"> quizzes! </p>
-
-                        <div class="carrossel">
-
-                            <button class="seta esquerda" onclick="anterior()">‹</button>
-                            <button class="seta direita" onclick="proximo()">›</button>
-
-                            <div class="item">
-                                <div class="caixa3 roxo">
-                                    <img class="borda" width="350px" height="180px" id="imagem" src="http://www.theotaku.com/guru_results/3855_Miku.jpg" alt="Which Vocaloid Are You?" /><br />
-                                    <a id="link" href="https://www.theotaku.com/quizzes/view/3855/which_vocaloid_are_you%3F">which vocaloid are you?</a>
-                                </div>
-                            </div>
-
+                </div>
                             
+            </div>
+        </section>
 
-                        </div>
-                    </div>
+        <!-- =========================
+             LIVROS
+             ========================= -->
 
-                </div>
-            </main>
-
-
-            <aside class="sidebar">
-                <div class="frame">
-
-                    <div class="real">
-                        <a href="/about.html" target="_self"</a><button>about</button>
-                        <a href="/blog.html" target="_self"</a><button>blog</button>
-                        <a href="/shrines.html" target="_self"</a><button>shrines</button>
-                        <a href="/portfolio.html" target="_self"</a><button>portfolio</button>
-                        <a href="/logs.html" target="_self"</a><button>logs</button>
-                        <a href="https://killmorrow.atabook.org" target="_self"</a><button>guestbook</button>
-                        <a href="/links.html" target="_self"</a><button>links</button>
-                    </div>
-
-                    <h3 class="titulo-metal">add my button!</h3>
-                    <div class="real">
-                        <div style="display: flex; align-items: center;">
-
-                            <a href="https://killmorrow.neocities.org" target="_blank">
-                                <img width="88" src="buttons/button.gif" alt="kill">
-                                <img width="88" src="buttons/claro.gif" alt="kill">
-                            </a>
-                        </div>
-                        <textarea rows="1" cols="1"><a href="https://killmorrow.neocities.org" target="_blank"><img src="your/path/here/button.gif" alt="kill"></a></textarea>
-                    </div>
-
-     
-                    <h3 class="titulo-metal">i am currently</h3>
-                    <div class="real lace dps2">
-                            <br>
-                            <img class="gif" src="images/console.gif"> <p class="post">playing:</p><br> <p>ace attorney PW trilogy</p><br>
-                            <img class="gif" src="images/disc.gif"> <p class="post">watching:</p><br> <p>kabaneri of the iron fortress</p><br>
-                            <img class="gif" src="images/book.gif"> <p class="post">reading:</p><br> <p>das kapital</p><br>
-                            <img class="gif" src="images/person.gif"> <p class="post">obsessed with:</p><br> <p>wilerunner</p><br>
-                      
-                    </div>
-
-                </div>
-
-            </aside>
-
-
+        
+        <img class="art-books" src="images/new/logs.png">
+        <div class="logs">
+            <p>logs</p>
+            <p class="animado"><a href="logs/anime.html">animes</a></p>
+            <p class="animado"><a href="logs/jogos.html">games</a></p>
+            <p class="animado"><a href="logs/livros.html">books</a></p>
+            <p class="animado"><a href="logs/filmes.html">movies</a></p>
         </div>
 
-        <footer class="footer">
-
-            <div class="frame">
-
-                <div class="uhm">
-                    <div>
-                    
-                        <marquee behavior="alternate" direction="right" scrollamount="15" onmouseover="this.stop()" onmouseout="this.start()">
-                            <a href='#'><img src="blinkies/self.gif" </a>
-                            <a href='#'><img src="blinkies/bad.gif" </a>
-                            <a href='#'><img src="blinkies/rawr.gif" </a>
-                            <a href='#'><img src="blinkies/morning.gif" </a>
-                            <a href='#'><img src="blinkies/pirate.gif" </a>
-                            <a href='#'><img src="blinkies/love.gif" </a>
-                            <a href='#'><img src="blinkies/morning.gif" </a>
-                            <a href='#'><img src="blinkies/f-ai.gif" </a>
-                            <a href='#'><img src="blinkies/urnotreal.gif" </a>
-                            <a href='#'><img src="blinkies/gottagofast.gif" </a>
-                            <a href='#'><img src="blinkies/hewo.gif" </a>
-                            <a href='#'><img src="blinkies/danger-to-society.gif" </a>
-                            <a href='#'><img src="blinkies/luvmyputer.gif" </a>
-                            <a href='#'><img src="blinkies/eepy.gif" </a>
-                            <a href='#'><img src="blinkies/proud_dork.gif" </a>
-                            <a href='#'><img src="blinkies/yipee.gif" width="150px" </a>
-                            <a href='#'><img src="blinkies/vampire.gif" width="150px" </a>
-                            <a href='#'><img src="blinkies/x6.gif" </a>
-                            <a href='#'><img src="blinkies/dvdcrazy.gif" </a>
-                        </marquee>
-                        
-                        <BR><p></p>
-                             <BR><p></p>
-
-                        <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center;">
-                            <a href="https://shishka.neocities.org"><img src="/buttons/sa2.png" title="shiska" width="88" height="31"></a>
-                            <a href="https://feign.neocities.org"><img src="/buttons/hank.gif" title="feign" width="88" height="31"></a>
-                            <a href="https://mesoscale.neocities.org/"><img src="/buttons/linux_powered.gif" title="mesoscale" width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/1bw30.gif" title="." width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/3passion.jpg" title="." width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/a122.gif" title="." width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/brazil8831.png" title="." width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/fuck.webp" title="." width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/horse.webp" title="." width="88" height="31"></a>
-                            <a href="#"><img src="/buttons/kuromi.gif" title="." width="88" height="31"></a>
-                        </div>
-
-                        <BR><p></p>
-
-                        <div>
-                            <a href="#"><img src="/stamps/miku.gif" title="."></a>
-                            <a href="#"><img src="/stamps/blue.png" title="."></a>
-                            <a href="#"><img src="/stamps/cats.gif" title="."width="99" height="56" ></a>
-                            <a href="#"><img src="/stamps/goth.png" title="."></a>
-                            <a href="#"><img src="/stamps/gays.webp" title="."></a>
-                            <a href="#"><img src="/stamps/kitty-stamp.gif" title="."> </a>
-                            <a href="#"><img src="/stamps/grell.png" title="."></a>
-                            <a href="#"><img src="/stamps/unndertale.gif" title="."></a>
-                            <a href="#"><img src="/stamps/sonic.png" title="."></a>
-
-
-
-                        </div>
-
-                    </div>
+        <div class="neigh marquee">
+            <div class="marquee-track rapida roxo">
+                <a target="_blank" href="https://keiism.neocities.org"><img src="buttons/x/keiism.png" alt="Keiism's quiet zone"></a>
+                <a target="_blank" href="https://thehappygarden.neocities.org/"><img src="buttons/x/garden.png" alt="The Happy Garden"></a>
+                <a target="_blank" href="https://nanacore.net/"><img src="https://nanacore.net/imgs/buttons/nanacore.gif" alt="nanacore"></a>
+                <a target="_blank" href="https://umidunite.neocities.org/"><img src="https://umidunite.neocities.org/umidunite_images/umidunite-button.gif" alt="umi.dunite"></a>
+                <a target="_blank" href="https://cyberstheb.neocities.org/"><img src="buttons/x/stheb.gif" alt="cyberstheb"></a>
             
+                <!-- repetição -->
+                 <a target="_blank" href="https://keiism.neocities.org"><img src="buttons/x/keiism.png" alt="Keiism's quiet zone"></a>
+                <a target="_blank" href="https://thehappygarden.neocities.org/"><img src="buttons/x/garden.png" alt="The Happy Garden"></a>
+                <a target="_blank" href="https://nanacore.net/"><img src="https://nanacore.net/imgs/buttons/nanacore.gif" alt="nanacore"></a>
+                <a target="_blank" href="https://umidunite.neocities.org/"><img src="https://umidunite.neocities.org/umidunite_images/umidunite-button.gif" alt="umi.dunite"></a>
+                <a target="_blank" href="https://cyberstheb.neocities.org/"><img src="buttons/x/stheb.gif" alt="cyberstheb"></a>
+            </div>
+            <p>; neighboorhood ;</p>
+        </div>
 
-                    
-                </div>
 
+        <!-- =========================
+             PLACA / LIVRO DIREITO
+             ========================= -->
+
+             
+
+        <div class="side animado">
+            <div class="status">
+                <div class="user" id="statuscafe-username"></div><br>
+                <div id="statuscafe-content"></div>
+                <script src="https://status.cafe/current-status.js?name=killmorrow" defer></script>
             </div>
 
-        </footer>
+            <div class="quiz">
+                <div class="item roxo">
+                    <div>
+                        <img class="borda" width="350px" height="180px" id="imagem" src="http://www.theotaku.com/guru_results/3855_Miku.jpg" alt="Which Vocaloid Are You?" /><br />
+                        <a id="link" href="https://www.theotaku.com/quizzes/view/3855/which_vocaloid_are_you%3F">which vocaloid are you?</a>
+                    </div>
+                </div>
+                <button class="seta esquerda" onclick="anterior()">‹</button>
+                <button class="seta direita" onclick="proximo()">›</button>
+            </div>
+        </div>
+
+        <!-- =========================
+             PERSONAGEM
+             ========================= -->
+
+        <a href="scrapbook.html" class="link"><img class="art art-character animado" src="images/new/scrapbook.png"></a>
+
+        <!-- =========================
+             GATOS / DECORAÇÕES
+             ========================= -->
+
+        <a href="shrines.html" class="link"><img class="art art-cat-right animado" src="images/new/shrines.png"></a>
+
+        <a href="links.html" class="link"><img class="art art-sonic animado" src="images/new/links.png"></a>
+        <!-- =========================
+             PLACA INFERIOR
+             ========================= -->
 
 
-    </div>
+        <img class="art art-bottom-plaque" src="images/new/visitors.png">
+        
     
+        <div class="visitor animado">
+            <div style="text-align: center; width: 100%;">
+                <p>you are visitor number:</p>
+                
+                <img src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==' id='cg_a250af4f' alt='Free Counter' title='Counter Statistics'><noscript><img src='https://besucherzaehler.gratis/counter.php?ID=a250af4f&STYLE=0' alt='Free Counter' title='Counter Statistics'></noscript><script>(function(i,c){i.src=c+'&LANG='+encodeURIComponent(navigator.language)+'&RES='+screen.width+'x'+screen.height+'&REF='+encodeURIComponent(document.referrer)+'&LOC='+encodeURIComponent(location.href)+'&NAVI='+encodeURIComponent(navigator.userAgent)})(document.getElementById('cg_a250af4f'),'https://besucherzaehler.gratis/counter.php?ID=a250af4f&STYLE=0')</script>
+              
 
+            </div>
+        </div>
+    </main>
+
+
+    
 <script>// Pokéneko v0.3 by https://james.nekoweb.org/
 // https://jamesschoch.github.io/Pokeneko/
 
@@ -517,10 +596,10 @@ window.addEventListener("resize", function() {
 
 });
 </script>
-<script src="script.js" defer></script>
 
-
+<script src="2nds/script.js" defer></script>
 </body>
 </html>
+
 
 

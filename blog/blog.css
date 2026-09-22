@@ -1,32 +1,32 @@
 @font-face {
   font-family: pixel;
-  src: url(fonts/PixelForge.otf);
+  src: url(../fonts/PixelForge.otf);
 }
 
 @font-face {
   font-family: centrion;
-  src: url(fonts/yoshiro.otf);
+  src: url(../fonts/yoshiro.otf);
 }
 
 
 @font-face {
   font-family: racing;
-  src: url(fonts/RacingNumbers.ttf);
+  src: url(../fonts/RacingNumbers.ttf);
 }
 
 @font-face {
   font-family: ledlight;
-  src: url(fonts/LEDLIGHT.otf);
+  src: url(../fonts/LEDLIGHT.otf);
 }
 
 @font-face {
   font-family: novem;
-  src: url(fonts/novem___.ttf);
+  src: url(../fonts/novem___.ttf);
 }
 
 @font-face {
   font-family: desminore;
-  src: url(fonts/desminore.otf);
+  src: url(../fonts/desminore.otf);
 }
 
 * {
@@ -53,7 +53,6 @@ html,
 body {
     margin: 10px 0;
     padding: 0;
-    transform: scale(1.2);
 }
 
 body {
@@ -71,6 +70,7 @@ body {
     height: 950px;
 
     margin: auto auto;
+    transform: scale(1.2);
 }
 
 
@@ -105,7 +105,7 @@ body {
     z-index: 1;
 
     overflow: hidden;
-    background-image: url("images/layout/44.png");
+    background-image: url("../images/layout/44.png");
 
     transform: scale(0.95);
 }
@@ -254,6 +254,81 @@ h1{
     background: transparent;
     border: #000000 px;
     
-    z-index: 999999999;
+    z-index: 1111;
     pointer-events: auto;
+}
+
+
+
+.navbar {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+
+    width: 900px;
+    z-index: 999999999999;
+
+    zoom: 0.7;
+}
+
+.nav-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    padding: 8px 22px;
+
+    border: 2px solid #514455;
+    border-radius: 5px;
+
+    background: linear-gradient(
+        #48434b,
+        #222025,
+        #39343d
+    );
+
+    color: #b79ac5;
+
+    box-shadow:
+        inset 0 1px 2px #7b6d80,
+        0 2px 3px #111;
+
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: linear-gradient(
+        #5a535f,
+        #29252d,
+        #48414e
+    );
+
+    color: #eadcf0;
+}
+
+.nav-item.active {
+    background: linear-gradient(
+        #39343d,
+        #222025,
+        #48434b
+    );
+
+    color: #d8c3e2;
+
+    border-color: #514455;
+
+    box-shadow:
+        inset 0 2px 3px #111,
+        0 1px 2px #000;
 }
