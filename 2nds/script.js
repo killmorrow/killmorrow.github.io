@@ -303,8 +303,8 @@ document.addEventListener("click", (e) => {
 
  function copyCode(id) {
                     const codes = {
-                        code1: '<a href="https://killmorrow.me"><img src="https://killmorrow.me/buttons/button.gif" alt="killmorrow"></a>',
-                        code2: '<a href="https://killmorrow.me"><img src="https://killmorrow.me/buttons/button2.gif" alt="killnirriw"></a>'
+                        code1: '<a href="https://killmorrow.me"><img src="https://killmorrow.me/buttons/dark.gif" alt="killmorrow"></a>',
+                        code2: '<a href="https://killmorrow.me"><img src="https://killmorrow.me/buttons/light.gif" alt="killmorrow"></a>'
                     };
 
                     navigator.clipboard.writeText(codes[id]);
