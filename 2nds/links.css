@@ -311,7 +311,7 @@ main li {padding-bottom:1em;}
 
 .navbar {
     position: absolute;
-    top: 11%;
+    top: 1%;
     left: 60%;
     transform: translateX(-50%);
 
@@ -325,7 +325,7 @@ main li {padding-bottom:1em;}
     height: 10px;;
     z-index: 999999999999;
 
-    zoom: 0.8;
+    zoom: 0.7;
 }
 
 .nav-item {

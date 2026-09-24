@@ -216,8 +216,9 @@ body {
     position: absolute;
     top: 20%;
     left: 23%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(1deg);
     margin: 0;
+    font-size: large;
 }
 
 .webring {
@@ -227,7 +228,23 @@ body {
     transform: translate(-50%, -50%);
     margin: 0;
     width: 200px;
-    text-align: center !important;
+    text-align: center;
+}
+
+.webring img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cliques {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cliques img {
+    margin: 0;
 }
 
 
